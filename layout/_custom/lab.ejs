@@ -1,0 +1,20 @@
+<!-- 自定义实验室页 -->
+
+<%
+    var projects = page.projects;
+    for (var i in projects) {
+%>
+    <p>
+        <span class="icon-cogs"></span>
+        <%- date(projects[i].time, 'YYYY-MM-DD') %>  <%- projects[i].title %>
+    </p>
+
+    <ul style="list-style-type: none;">
+        <% var content = projects[i].content; %>
+        <% for (var j in content) { %>
+        <li style="font-size: 12px;">
+            <a href="<%- content[j].link %>" target="_blank"><span class="icon-price-tags"></span> <%- content[j].name %></a>
+        </li>
+        <% } %>
+    </ul>
+<% } %>

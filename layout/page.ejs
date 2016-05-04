@@ -1,0 +1,17 @@
+<!-- 独立页面 -->
+<article class="post article">
+    <header class="text-center">
+        <h4 class="post-title"><a href="javascript: void(0);"><%- page.title %></a></h4>
+    </header>
+    <div class="post-content">
+        <% if (page.title == '关于') { %>
+            <%- partial('_custom/about', { page: page, post: page }) %>
+        <% } else if (page.title == '实验室') { %>
+            <%- partial('_custom/lab', { page: page, post: page }) %>
+        <% } else if (page.title == '留言') { %>
+            <%- partial('_custom/comment', { page: page, post: page }) %>
+        <% } else { %>
+            <%- page.content %>
+        <% } %>
+    </div>
+</article>

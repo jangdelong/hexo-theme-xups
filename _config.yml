@@ -1,0 +1,128 @@
+#############################
+# Xups for Hexo主题配置文件
+# Jelon
+# http://jelon.top
+#############################
+
+#----------------------------
+# 头部导航
+#----------------------------
+menu:
+  home:
+    name: 首页
+    link: /
+    icon: icon-home
+  lab:
+    name: 实验室
+    link: /lab/
+    icon: icon-lab
+  about:
+    name: 关于
+    link: /about/
+    icon: icon-about
+  comment:
+    name: 留言
+    link: /comment/
+    icon: icon-comment
+
+#----------------------------
+# 副导航
+#----------------------------
+subnav:
+  github: "#"
+  weibo: "#"
+  rss: "#"
+  zhihu: "#"
+
+#----------------------------
+# RSS
+#----------------------------
+rss: /atom.xml
+
+#----------------------------
+# Content
+#----------------------------
+excerpt_link: more
+fancybox: true
+
+#----------------------------
+# Favicon
+#----------------------------
+favicon: /favicon.ico
+
+#----------------------------
+# 头像url
+#----------------------------
+avatar: /img/jelon.jpg
+
+#----------------------------
+# 是否开启分享
+#----------------------------
+share: true
+
+#----------------------------
+# 是否使用多说评论框
+#----------------------------
+duoshuo:
+  enable: true
+  short_name: jelon123
+
+#----------------------------
+# 是否开启云标签
+#----------------------------
+tagcloud: true
+
+#----------------------------
+# 友情链接
+#----------------------------
+friends:
+  enable: true
+  list:
+    1:
+      name: Maxwell
+      title: 欧阳业伟博客
+      link: http://ouyangyewei.me/
+    2:
+      name: Haoren博客
+      title: 徐华峰技术博客
+      link: http://blog.sina.com.cn/u/1825875765
+
+#----------------------------
+# 头部链接
+#----------------------------
+head_links:
+  enable: true
+  list:
+    sup:
+      0:
+        name: 旧博客
+        link: http://jelon.kuphp.net
+      1:
+        name: Icomoon
+        link: https://icomoon.io
+      last:
+        name: 百度统计
+        link: http://tongji.baidu.com/web/welcome/login
+    sub:
+      sinaweibo:
+        name: 新浪微博
+        link: http://weibo.com/u/2376003112/
+      qqweibo:
+        name: Facebook
+        link: https://www.facebook.com/profile.php?id=100011855760219&ref=bookmarks
+#----------------------------
+# SEO
+#----------------------------
+SEO:
+  keywords: 前端, Web, Jelon, 张德龙
+  description: Jelon个人前端小站
+
+#----------------------------
+# 百度分析
+#----------------------------
+baidu_analytics: true
+
+#----------------------------
+# 高亮样式
+#----------------------------
+highlight_theme: normal

@@ -1,0 +1,9 @@
+<!-- 文章分类 -->
+<ul class="widget-bd">
+    <% site.categories.forEach(function(cat){ %>
+    <li>
+        <a href="<%= url_for(cat.path) %>"><%= cat.name %></a>
+        <span class="badge">(<%= cat.length %>)</span>
+    </li>
+    <% }); %>
+</ul>

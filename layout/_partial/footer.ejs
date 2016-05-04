@@ -1,0 +1,11 @@
+<footer class="footer">
+    Copyright &copy;
+    <% if (new Date().getFullYear() == 2016) { %>
+        <%- new Date().getFullYear() %>
+    <% } else { %>
+        2016-<%- new Date().getFullYear() %>
+    <% } %>
+
+    <a href="<%- url_for() %>">JELON.TOP</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>

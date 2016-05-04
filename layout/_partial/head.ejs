@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <%
+    var title = page.title;
+
+    if (is_archive()) {
+        title = '文章归档';
+        if (is_month()){
+            title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()) {
+            title += ': ' + page.year;
+        }
+    } else if (is_category()) {
+        title = '`' + page.category + '`分类下的文章';
+    } else if (is_tag()) {
+        title = '`' + page.tag + '`标签下的文章';
+    }
+    %>
+    <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="<%- theme.SEO.keywords %>" >
+    <meta name="description" content="<%- theme.SEO.description %>" >
+
+    <% if (theme.rss) { %>
+    <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml" >
+    <% } %>
+    <% if (config.favicon) { %>
+    <link rel="shortcut icon" href="<%- url_for(config.favicon) %>" >
+    <% } else { %>
+    <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>" >
+    <% } %>
+    <%- css('css/style') %>
+    <!--[if lt IE 9]>
+    <%- js('js/html5') %>
+    <![endif]-->
+    <%- partial('baidu-analytics') %>
+
+</head>

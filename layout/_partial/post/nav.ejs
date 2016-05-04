@@ -1,0 +1,40 @@
+<!-- 上一篇/下一篇 -->
+<% if (post.prev || post.next) { %>
+<div class="article-nav clearfix">
+    <% if (post.prev) { %>
+    <span class="prev fl">
+        上一篇<br >
+        <a href="<%- url_for(post.prev.path) %>">
+            <% if (post.prev.title) { %>
+                <%= post.prev.title %>
+            <% } else { %>
+                无标题
+            <% } %>
+        </a>
+    </span>
+    <% } else { %>
+    <span class="prev fl">
+        上一篇<br >
+        <a href="javascript: void(0);">没有上一篇了</a>
+    </span>
+    <% } %>
+
+    <% if (post.next) { %>
+    <span class="next fr">
+        下一篇<br >
+        <a href="<%- url_for(post.next.path) %>">
+            <% if (post.next.title) { %>
+                <%= post.next.title %>
+            <% } else { %>
+                无标题
+            <% } %>
+        </a>
+    </span>
+    <% } else { %>
+    <span class="next fr">
+        下一篇<br >
+        <a href="javascript: void(0);">没有下一篇了</a>
+    </span>
+    <% } %>
+</div>
+<% } %>

@@ -1,0 +1,86 @@
+/*!
+ * 响应式媒体查询
+ */
+@media screen and (min-width: 1440px)
+  .container
+    max-width 1340px
+  .content
+    min-height 500px
+@media screen and (max-width: 1000px) and (min-width: 960px)
+  .container
+    max-width 952px
+  .content
+    min-height 500px
+@media screen and (max-width: 959px)
+  .home
+    margin-top 93px
+  .container
+    padding 0 10px
+  .content
+      min-height 500px
+  .sidebar
+    display none
+  .content-main
+    margin-right 0
+    padding 20px 10px
+  .header
+    .logo
+      float none
+      width auto
+    .profile
+      display none
+    .menu
+      float none
+      border 1px solid rgba(0, 0, 0, .1)
+      border-top 0
+      overflow hidden
+      .item
+        width 50%
+        height auto
+        line-height 1
+        padding 10px 0
+  .hidden
+    display none
+  .dropnav
+    position absolute
+    display block
+    top 17px
+    right 20px
+    width 40px
+    height @width
+    padding 0 2px
+    line-height @height
+    font-size @height
+    color #efe0ce
+    border 2px solid @color
+    border-radius 2px
+    z-index 3
+    cursor pointer
+    &:hover
+      opacity .8
+  .post
+    header .post-title
+      font-size 15px
+    .post-meta
+      text-center()
+    .post-content
+      .post-excerpt
+        margin-right 0
+      .post-thumbnail
+        display none
+      .more a
+        position relative
+        display block
+        padding 6px
+        text-center()
+  .page-navigator
+    padding-left 0
+  .page-navigator li
+    display inline-block
+    margin-right 7px
+    opacity .8
+
+  .page-navigator li a
+    display block
+    padding 2px 8px
+    background-color #eee

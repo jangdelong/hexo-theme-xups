@@ -1,0 +1,93 @@
+/*!
+ * 正文内容
+ */
+.content
+  float left
+  width 100%
+  min-height 689px
+.content-main
+  margin-right 380px
+  padding 20px
+/*!
+ * Post
+ */
+.post
+  padding 25px 0
+  border-bottom 1px solid c-eee
+  overflow hidden
+.post
+  header
+    margin 0 0 10px 0
+    > a
+      position relative
+      display inline-block
+      margin-right 6px
+      padding 4px 7px
+      top -3px
+      color c-fff
+      background-color #ff5e52
+      font-size 12px
+      vertical-align baseline
+      opacity .85
+      &:after
+        position absolute
+        display block
+        top 9px
+        right -4px
+        width 0
+        height 0
+        content " "
+        border-left 4px solid #ff5e52
+        border-top 4px solid transparent
+        border-bottom 4px solid transparent
+    .post-title
+      display inline
+      font-size 20px
+      font-weight normal
+      a:hover
+        border-bottom 1px dotted #ff5e52
+  .post-meta
+    color #888
+    font-size 12px
+    .post-views,
+    .post-cat,
+    .post-comments
+      margin-right 15px
+  .post-content
+    position relative
+    color #555
+    img
+      max-width 100%
+    .post-excerpt
+      position relative
+      min-height 140px
+      margin-right 210px
+      overflow hidden
+    .post-thumbnail
+      position absolute
+      top 0
+      right 0
+      width 200px
+      height 140px
+      overflow hidden
+    @extend $base-style
+.post-thumbnail
+  .thumbnail
+    width 200px
+    height 140px
+    border 0
+    transition .5s
+  a:hover .thumbnail
+    transform scale(1.2)
+.post-content
+  .more a
+    position absolute
+    display inline-block
+    right 0
+    bottom 0
+    padding 3px 7px
+    color c-fff
+    background-color #51cc87
+    opacity .8
+    &:hover
+      opacity .75

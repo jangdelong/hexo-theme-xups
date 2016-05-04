@@ -1,0 +1,6 @@
+<!-- 首页 -->
+<% if (page.content) { %>
+    <%- page.content %>
+<% } else { %>
+    <%- partial('_partial/archive', { pagination: 2, index: true }) %>
+<% } %>

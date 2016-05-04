@@ -1,0 +1,56 @@
+<!-- 文章 -->
+<article class="post">
+    <header>
+        <% if (post.categories && post.categories.length) { %>
+        <%-
+            list_categories(post.categories, {
+                show_count: false,
+                class: 'cat',
+                style: 'none',
+                separator: '|'
+            })
+        %>
+        <% } else { %>
+            <a href="javascript: void(0);" class="cat">未分类</a>
+        <% } %>
+        <!-- 文章标题 -->
+        <%- partial('post/title', { class_name: 'post-title' }) %>
+    </header>
+    <p class="post-meta">
+        <%- post.author || 'Jelon' %> 发表于
+        <%- partial('post/date', { date_format: 'YYYY-MM-DD' }) %>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            <% if (index == true) { %>
+                <%- post.excerpt || post.content %>
+            <% } %>
+            <p class="more">
+                <a href="<%- post.permalink %>">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="<%- post.photos[0] %>">
+            <a href="<%= post.permalink %>" title="<%= post.title %>">
+                <% if (post.thumbnail) { %>
+                    <!--
+                    <%- image_tag(post.thumbnail, { class: "thumbnail" }) %>
+                    -->
+                    <img class="thumbnail" src="<%- url_for('img/default.png') %>" data-echo="<%= post.thumbnail %>" alt="<%= post.title %>" >
+                <% } else if (post.photos.length) { %>
+                    <img class="thumbnail" src="<%- url_for('img/default.png') %>" data-echo="<%= url_for(post.photos[0]) %>" alt="<%= post.title %>" >
+                <% } else { %>
+                    <img class="thumbnail" src="<%- url_for('img/default.png') %>" data-echo="<%- url_for('img/thumbnail/' + date(post.date, 'YYYY-MM-DD').charAt(date(post.date, 'YYYY-MM-DD').length - 1)  + '.jpg') %>" alt="默认配图" >
+                <% } %>
+            </a>
+        </div>
+    </div>
+    <p class="post-meta">
+        <a href="<%= post.permalink %>#comments" class="post-comments ds-thread-count" data-thread-key="<%- post.slug %>" data-count-type="comments"></a>
+        <!-- 标签 -->
+        <span class="post-tags">
+            标签：
+            <%- partial('post/tag') %>
+        </span>
+    </p>
+</article>

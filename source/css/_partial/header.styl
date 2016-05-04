@@ -1,0 +1,159 @@
+/*!
+ * 头部样式
+ */
+.header
+  position fixed
+  width 100%
+  top 0
+  left 0
+  background-color c-fff
+  box-shadow 1px 1px 5px rgba(0, 0, 0, .08)
+  z-index 4
+  .header-main
+    position relative
+.header .logo
+  float left
+  width 160px
+.logo
+  a
+    position relative
+    display block
+    height 78px
+    line-height @height
+    color c-fff
+    background-color #ff5e52
+    opacity .85
+    text-center()
+    overflow hidden
+    .cover
+      position absolute
+      display block
+      top 0
+      left 0
+      width 100%
+      transition top .5s
+      .name
+        display block
+        height 100%
+        font-size 28px
+        font-family "HomizioNova", "Microsoft Yahei"
+        font-style italic
+      .description
+        display block
+        height 100%
+        color c-fff
+        background-color #51cc87
+        opacity .85
+    &:hover .cover
+      top -100%
+.header .menu
+  margin 0
+  padding 10px
+  float left
+  list-style-type none
+.menu
+  .item
+    float left
+    padding 0 20px
+    height 58px
+    line-height @height
+    a
+      color c-666
+      &:hover
+        color #ff5e52
+  .current a
+    color #ff5e52
+.header .profile
+  position absolute
+  right 0
+  top 0
+  height 78px
+.profile
+  .avatar
+    width 50px
+    height 50px
+    margin 14px 0
+    border 1px solid c-ddd
+    border-radius 3px
+    > img
+      width 46px
+      height 46px
+      margin 2px
+  .feeds
+    height 78px
+    padding 0 10px
+    color c-666
+    font-size 12px
+    text-right()
+    .links
+      margin 10px 0 0
+      padding 10px 0 3px
+    .sns
+      margin 0 0 10px 0
+      padding 2px 0 10px
+      line-height 14px
+      a
+        margin-left 5px
+      .sinaweibo
+        b
+          color #ff5e52
+          font-size 14px
+        &:hover
+          color #ff5e52
+      .qqweibo
+        b
+          color #1faeff
+          font-size 14px
+        &:hover
+          color #1faeff
+      .wechat
+        position relative
+        b
+          color #4bc916
+          font-size 14px
+        .popover
+          position absolute
+          display none
+          top 28px
+          left 50%
+          width 120px
+          height @width
+          margin-left -60px
+          border 1px solid c-ddd
+          background-color c-fff
+          border-radius 5px
+          img
+            width 120px
+            height @width
+            border 0
+            border-radius 5px
+          .arrow
+            position absolute
+            display block
+            top -10px
+            left 50%
+            width 0
+            height 0
+            margin-left -10px
+            border-width 10px
+            border-color transparent
+            border-style solid
+            border-top-width 0
+            border-bottom-color c-ddd
+            &:after
+              position absolute
+              content " "
+              top 1px
+              left 50%
+              margin-left -9px
+              border-width 9px
+              border-color transparent
+              border-style solid
+              border-top-width 0
+              border-bottom-color c-fff
+        &:hover
+          color #4bc916
+          .popover
+            display block
+.dropnav
+  display none

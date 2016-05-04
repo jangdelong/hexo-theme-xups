@@ -1,0 +1,44 @@
+/*!
+ * Reset css
+ */
+::selection
+  color c-fff
+  background-color #f99
+  opacity .8
+::-webkit-scrollbar
+  width 7px
+  height 4px
+::-webkit-scrollbar-thumb
+  border-radius 4px
+  background rgba(0, 0, 0, .15)
+::-webkit-scrollbar-track
+  background rgba(0, 0, 0, .06)
+body
+  font 14px/1.5 "Microsoft Yahei", "微软雅黑", Arial, "宋体"
+  color c-666
+  -webkit-overflow-scrolling touch  // iOS下支持弹性滚动
+a
+  color c-666
+  text-decoration none
+  &:link,
+  &:visited,
+  &:active
+    color c-666
+  &:hover
+    color #ff5e52
+hr
+  border-top 1px solid c-eee
+.fl
+  float left
+.fr
+  float right
+.text-center
+  text-center()
+.clearfix
+  zoom 1
+  &:after
+    display block
+    width 100%
+    height 0
+    content " "
+    clear both

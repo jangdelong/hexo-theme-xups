@@ -1,0 +1,6 @@
+<% if (post.link) { %>
+    <!--<h3 class="post-title"><a href="#">CSS3绘制好玩ICON-有棒棒糖转转效果哦</a></h3>-->
+    <h3 class="<%= class_name || 'post-title' %>"><a href="<%= url_for(post.link) %>"><%= post.title || post.link %></a></h3>
+<% } else if (post.title) { %>
+    <h3 class="<%= class_name || 'post-title' %>"><a href="<%= post.permalink %>"><%= post.title %></a></h3>
+<% } %>

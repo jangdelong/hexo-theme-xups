@@ -1,0 +1,24 @@
+<!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <%- partial('_widget/category') %>
+    </section>
+
+    <% if (theme.duoshuo.enable) { %>
+    <!-- 最新评论 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>最近评论</strong></h3>
+        <%- partial('_widget/recent_comments') %>
+    </section>
+    <% } %>
+
+    <% if (theme.friends.enable && theme.friends['list']) { %>
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <%- partial('_widget/friend_links') %>
+    </section>
+    <% } %>
+</aside>
+<!-- / 侧栏部分 -->

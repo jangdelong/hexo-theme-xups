@@ -1,0 +1,77 @@
+/*!
+ * Sidebar
+ */
+.sidebar
+  float left
+  width 360px
+  margin-left -380px
+  padding-top 20px
+  padding-bottom 20px
+  .widget
+    position relative
+    margin-bottom 20px
+    clear both
+.widget
+  ul
+    margin 0
+    padding 0
+  #ds-recent-comments li.ds-comment:first-child
+    border-top 0
+  .widget-hd
+    margin 0
+    padding 0
+    border-bottom 2px solid c-eee
+    strong
+      position relative
+      display inline-block
+      bottom -2px
+      color #444
+      border-bottom 2px solid #ff5e52
+      font-weight normal
+    .logout
+      position relative
+      bottom -2px
+      font-size 14px
+      font-weight normal
+      text-decoration underline
+      &:hover
+        text-decoration none
+  .widget-bd
+    margin 0
+    padding 0
+    list-style none
+    li
+      display block
+      padding 10px 0
+      line-height 1.5
+      border-bottom 1px solid c-eee
+      font-size 12px
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
+      a .avatar
+        float left
+        width 36px
+        height 36px
+        margin-right 10px
+        border-radius 50%
+        transform rotate(0)
+        transition .5s
+      a:hover .avatar
+        transform rotate(360deg)
+        opacity .85
+      p
+        margin 0
+        padding 0
+  li
+    .ds-avatar img
+      float left
+      width 36px
+      height 36px
+      margin-right 10px
+      border-radius 50%
+      transform rotate(0)
+      transition .5s
+    &:hover .ds-avatar img
+      transform rotate(360deg)
+      opacity .85

@@ -1,0 +1,29 @@
+<!-- 自定义留言页 -->
+
+<p class="text-center">
+    <img style="width: 250px; height: 250px; border: 1px solid #eee; padding: 4px; border-radius: 3px;" src="<%- url_for('img/url.png') %>">
+</p>
+
+<p class="text-center">
+    手机二维码扫描访问
+</p>
+<div class="comments" id="comments">
+    <% if (theme.duoshuo.enable) { %>
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="comment" data-title="<%- page.title %>" data-url="<%- post.permalink %>"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"<%- theme.duoshuo.short_name %>"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+    <% } %>
+</div>

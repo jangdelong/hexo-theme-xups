@@ -1,0 +1,54 @@
+<header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="<%- url_for() %>">
+                <div class="cover">
+                    <span class="name"><%= config.title %></span>
+                    <span class="description"><%= config.subtitle %></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            <% for (var i in theme.menu) { %>
+            <li rel="<%= url_for(path) %>" class="item <%= url_for(theme.menu[i].link) == url_for(path).substring(0, url_for(path).lastIndexOf('/') + 1) ? 'current' : ''   %>">
+                <a href="<%= url_for(theme.menu[i].link) %>" title="<%= theme.menu[i].name %>" class="<%= theme.menu[i].icon %>">
+                    <%= theme.menu[i].name %>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                <% if (theme.head_links.enable) { %>
+                <%
+                    var supList = theme.head_links.list.sup,
+                        subList = theme.head_links.list.sub;
+                %>
+                <p class="links">
+                    <% for (var i in supList) { %>
+                        <a href="<%= supList[i]['link'] %>" target="_blank"><%= supList[i]['name'] %></a>
+                        <% if (i != 'last') { %>|<% } %>
+                    <% } %>
+                </p>
+                <p class="sns">
+                    <% for (var j in subList) { %>
+                        <a href="<%= subList[j]['link'] %>" class="<%= j %>" target="_blank"><b>■</b> <%= subList[j]['name'] %></a>
+                    <% } %>
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        微信
+                        <span class="popover">
+                            <img src="<%= url_for('img/wechat_undefined.png') %>" width="120" height="120" alt="我的微信">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                <% } %>
+            </div>
+            <div class="avatar fr">
+                <img src="<%- theme.avatar %>" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
