@@ -79,13 +79,13 @@ friends:
   enable: true
   list:
     1:
-      name: Maxwell
-      title: 欧阳业伟博客
-      link: http://ouyangyewei.me/
+      name: xxx
+      title: xxx博客
+      link: http://xxx.me/
     2:
-      name: Haoren博客
-      title: 徐华峰技术博客
-      link: http://blog.sina.com.cn/u/1825875765
+      name: yyy博客
+      title: yyy技术博客
+      link: http://yyy.com
 
 #----------------------------
 # 头部链接
