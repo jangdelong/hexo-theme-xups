@@ -84,8 +84,12 @@ friends:
       link: http://ouyangyewei.me/
     2:
       name: Haoren博客
-      title: 徐华峰技术博客
+      title: 网络安全博客
       link: http://blog.sina.com.cn/u/1825875765
+    3: 
+      name: 微易服务平台
+      title: 让微营销更简单
+      link: http://www.wytone.com/
 
 #----------------------------
 # 头部链接
@@ -98,8 +102,8 @@ head_links:
         name: 旧博客
         link: http://jelon.kuphp.net
       1:
-        name: Icomoon
-        link: https://icomoon.io
+        name: Github
+        link: https://github.com/jangdelong
       last:
         name: 百度统计
         link: http://tongji.baidu.com/web/welcome/login

@@ -24,7 +24,7 @@
     <div class="post-content">
         <div class="post-excerpt">
             <% if (index == true) { %>
-                <%- post.excerpt || post.content %>
+                <%- post.blogexcerpt || post.excerpt || post.content %>
             <% } %>
             <p class="more">
                 <a href="<%- post.permalink %>">阅读剩下更多</a>
