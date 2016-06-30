@@ -79,14 +79,10 @@ friends:
   enable: true
   list:
     1:
-      name: Maxwell
-      title: 欧阳业伟博客
-      link: http://ouyangyewei.me/
-    2:
       name: Haoren博客
       title: 网络安全博客
       link: http://blog.sina.com.cn/u/1825875765
-    3: 
+    2: 
       name: 微易服务平台
       title: 让微营销更简单
       link: http://www.wytone.com/
