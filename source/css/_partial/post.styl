@@ -72,13 +72,31 @@
       overflow hidden
     @extend $base-style
 .post-thumbnail
+  position relative
   .thumbnail
     width 200px
     height 140px
     border 0
     transition .5s
-  a:hover .thumbnail
-    transform scale(1.2)
+  a:after
+    content ""
+    position absolute
+    left -70px
+    top 0
+    width 140px
+    height 140px
+    background-image -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,0))
+    background-image -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,0))
+    transform skewx(-25deg)
+    -o-transform skewx(-25deg)
+    -moz-transform skewx(-25deg)
+    -webkit-transform skewx(-25deg)
+.post-thumbnail:hover a:after 
+  left 130px
+  -webkit-transition all .3s ease-in-out
+  -moz-transition all .3s ease-in-out
+  -o-transition all .3s ease-in-out
+  transition all .3s ease-in-out
 .post-content
   .more a
     position absolute
