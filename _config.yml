@@ -126,3 +126,9 @@ baidu_analytics: true
 # 高亮样式
 #----------------------------
 highlight_theme: normal
+#----------------------------
+# CDN
+#----------------------------
+CDN: //7xs305.com1.z0.glb.clouddn.com/
+
+
