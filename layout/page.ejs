@@ -4,11 +4,11 @@
         <h4 class="post-title"><a href="javascript: void(0);"><%- page.title %></a></h4>
     </header>
     <div class="post-content">
-        <% if (page.title == '关于') { %>
+        <% if (page.pageid && page.pageid == 'about') { %>
             <%- partial('_custom/about', { page: page, post: page }) %>
-        <% } else if (page.title == '实验室') { %>
+        <% } else if (page.pageid && page.pageid == 'lab') { %>
             <%- partial('_custom/lab', { page: page, post: page }) %>
-        <% } else if (page.title == '留言') { %>
+        <% } else if (page.pageid && page.pageid == 'comment') { %>
             <%- partial('_custom/comment', { page: page, post: page }) %>
         <% } else { %>
             <%- page.content %>
