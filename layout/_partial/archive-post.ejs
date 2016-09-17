@@ -39,7 +39,7 @@
                     <img class="thumbnail" src="<%- url_for('img/default.png') %>" data-echo="<%= post.thumbnail %>" alt="<%= post.title %>" >
                 <% } else if (post.photos.length) { %>
                     <img class="thumbnail" src="<%- url_for('img/default.png') %>" data-echo="<%= url_for(post.photos[0]) %>" alt="<%= post.title %>" >
-                <% } if (theme.CDN) { %>
+                <% } else if (theme.CDN) { %>
                     <img class="thumbnail" src="<%- url_for('img/default.png') %>" data-echo="<%- url_for(theme.CDN + 'thumbnail/' + date(post.date, 'YYYY-MM-DD').charAt(date(post.date, 'YYYY-MM-DD').length - 1)  + '.jpg') %>" alt="默认配图" >
                 <% } else  { %>
                     <img class="thumbnail" src="<%- url_for('img/default.png') %>" data-echo="<%- url_for('img/thumbnail/' + date(post.date, 'YYYY-MM-DD').charAt(date(post.date, 'YYYY-MM-DD').length - 1)  + '.jpg') %>" alt="默认配图" >

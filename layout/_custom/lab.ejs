@@ -1,11 +1,17 @@
 <!-- 自定义实验室页 -->
 
+<section>
+    <img src="<%- url_for(theme.CDN + 'lab/banner.jpg') %>" alt="Lab Banner" style="max-width: 100%;" >
+<section>
 <%
     var projects = page.projects;
     for (var i in projects) {
 %>
     <p style="font-weight: bold;">
+        <!--
         <span class="icon-cogs"></span>
+        -->
+        <span class="icon-price-tags"></span>
         <%- date(projects[i].time, 'YYYY-MM-DD') %>  <%- projects[i].title %>
     </p>
 
@@ -13,7 +19,7 @@
         <% var content = projects[i].content; %>
         <% for (var j in content) { %>
         <li>
-            <a href="<%- content[j].link %>" target="_blank"><span class="icon-price-tags"></span> <%- content[j].name %></a>
+            <a href="<%- content[j].link %>" target="_blank"><!--<span class="icon-price-tags"></span>--><%- content[j].name %></a>
         </li>
         <% } %>
     </ul>
