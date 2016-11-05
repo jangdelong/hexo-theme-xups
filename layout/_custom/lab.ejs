@@ -2,7 +2,7 @@
 
 <section>
     <img src="<%- url_for(theme.CDN + 'lab/banner.jpg') %>" alt="Lab Banner" style="max-width: 100%;" >
-<section>
+</section>
 <%
     var projects = page.projects;
     for (var i in projects) {
@@ -19,7 +19,8 @@
         <% var content = projects[i].content; %>
         <% for (var j in content) { %>
         <li>
-            <a href="<%- content[j].link %>" target="_blank"><!--<span class="icon-price-tags"></span>--><%- content[j].name %></a>
+            <a href="<%- content[j].link %>" target="_blank" class="icon-lab fr" title="查看代码" style="color: #ff5e52; border-bottom: none; font-size: 16px; margin-top: 2.5px;"></a>
+            <span><%- content[j].name %></span>
         </li>
         <% } %>
     </ul>

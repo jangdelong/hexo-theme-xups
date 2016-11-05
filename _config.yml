@@ -89,7 +89,7 @@ friends:
     3:
       name: Maxwell博客
       title: 技术博客
-      link: http://ouyangyewei.me/
+      link: http://blog.csdn.net/yeweiouyang
     4:
       name: 朱旋个人博客
       title: 技术博客
@@ -114,7 +114,7 @@ head_links:
     sub:
       sinaweibo:
         name: 新浪微博
-        link: http://weibo.com/u/2376003112/
+        link: http://weibo.com/u/5462713927
       qqweibo:
         name: Facebook
         link: https://www.facebook.com/profile.php?id=100011855760219&ref=bookmarks
@@ -138,5 +138,3 @@ highlight_theme: normal
 # CDN
 #----------------------------
 CDN: //7xs305.com1.z0.glb.clouddn.com/
-
-
