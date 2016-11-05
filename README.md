@@ -31,8 +31,13 @@
     npm install
     ```
 
-5. 运行`hexo s --watch`
-
+5. 运行 `hexo s --watch`
+	
+	```
+	cd ..
+	hexo s --watch
+	```
+	
     运行上述命令后，浏览器打开 [http://localhost:4000](http://localhost:4000) 即可本地访问我们的网站
     
 ## 创建文章
