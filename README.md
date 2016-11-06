@@ -35,7 +35,7 @@
 	
 	```
 	cd ..
-	hexo generate
+	hexo generate # 或者 hexo g
 	hexo s --watch
 	```
 	
