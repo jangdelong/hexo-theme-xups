@@ -18,17 +18,17 @@
 	npm install
     ```
 
-2. 将jelon.top的源码拉到本地
+2. 将主题拉到本地，并解压
 
     ```
     cd themes
     git clone https://github.com/jangdelong/hexo-theme-xups.git
     ```
 
-4. 安装npm包
+4. 配置 _config.yml 的 theme 配置
 
     ```
-    npm install
+    theme: hexo-theme-xups
     ```
 
 5. 运行 `hexo s --watch`
