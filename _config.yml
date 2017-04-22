@@ -70,7 +70,7 @@ weibo_show: false
 #----------------------------
 gentie:
   enable: true
-  productKey: c06bb9930e6f4b38a9997cb9bd17aba5
+  productKey:
 
 #----------------------------
 # 是否开启云标签
@@ -138,4 +138,4 @@ highlight_theme: normal
 #----------------------------
 # CDN
 #----------------------------
-CDN: //7xs305.com1.z0.glb.clouddn.com/
+CDN:
