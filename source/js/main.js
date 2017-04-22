@@ -173,6 +173,7 @@ var JELON = function() {
         },
         backToTop: function() {
             var _this = this;
+            if (typeof _this.$(_this.name + '__backToTop') === 'undefined') return; 
             window.onscroll = window.onresize = function() {
                 if (document.documentElement.scrollTop + document.body.scrollTop > 0) {
                     _this.$(_this.name + '__backToTop').style.display = 'block';

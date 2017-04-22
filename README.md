@@ -3,9 +3,8 @@
 ## 主题的一些特性
 
 1. [百度分析](http://tongji.baidu.com/web/welcome/login)
-2. [多说](http://duoshuo.com)评论
-3. [个人xups主题](https://github.com/jangdelong/hexo-theme-xups)
-4. 博客图片存储于[七牛云存储](http://www.qiniu.com/)
+2. [网易云跟帖](https://gentie.163.com/)评论
+3. 博客图片存储于[七牛云存储](http://www.qiniu.com/)
 
 ## 使用指引
 
@@ -14,8 +13,8 @@
     ```
     npm i hexo-cli -g
     hexo init blog
-	cd blog
-	npm install
+  cd blog
+  npm install
     ```
 
 2. 将主题拉到本地，并解压
@@ -32,13 +31,13 @@
     ```
 
 5. 运行 `hexo s --watch`
-	
-	```
-	cd ..
-	hexo generate # 或者 hexo g
-	hexo s --watch
-	```
-	
+  
+  ```
+  cd ..
+  hexo generate # 或者 hexo g
+  hexo s --watch
+  ```
+  
     运行上述命令后，浏览器打开 [http://localhost:4000](http://localhost:4000) 即可本地访问我们的网站
     
 ## 创建文章
@@ -87,15 +86,15 @@
     
     ```
     
-	---
-	title: 文章标题
-	blogexcerpt: 这里是自定义文章摘要
-	...
-	---
-	
-	这里是文章正文内容
-	...
-	
+  ---
+  title: 文章标题
+  blogexcerpt: 这里是自定义文章摘要
+  ...
+  ---
+  
+  这里是文章正文内容
+  ...
+  
     ```
     
     这部分是文章摘要，这部分是文章摘要。在hexo模版里可通过 <%- post.blogexcerpt || post.excerpt || post.content %> 来引用。

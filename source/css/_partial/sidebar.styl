@@ -3,8 +3,8 @@
  */
 .sidebar
   float left
-  width 360px
-  margin-left -380px
+  width 330px
+  margin-left -350px
   padding-top 20px
   padding-bottom 20px
   .widget
@@ -15,8 +15,6 @@
   ul
     margin 0
     padding 0
-  #ds-recent-comments li.ds-comment:first-child
-    border-top 0
   .widget-hd
     margin 0
     padding 0
@@ -63,15 +61,30 @@
       p
         margin 0
         padding 0
-  li
-    .ds-avatar img
+    .tag-item
       float left
-      width 36px
-      height 36px
-      margin-right 10px
-      border-radius 50%
-      transform rotate(0)
+      width 32.6666%
+      margin 0 1% 1% 0
+      padding 0 8px
+      line-height 29px
+      font-size 12px
+      color c-999
+      background-color #f6f6f6
+      -webkit-box-sizing border-box
+      box-sizing border-box
+      text-overflow ellipsis
+      overflow hidden
+      white-space nowrap
+      -webkit-transition .5s
+      -ms-transition .5s
+      -moz-transition .5s
       transition .5s
-    &:hover .ds-avatar img
-      transform rotate(360deg)
-      opacity .85
+      &:hover
+        color #fff
+        background-color #ff5e52
+        opacity .85;
+    .tag-item:nth-child(3n+0)
+      margin-right 0
+  .tag-wrap
+    padding 10px 0 0
+    overflow hidden

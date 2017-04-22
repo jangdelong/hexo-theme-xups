@@ -48,7 +48,16 @@
         </div>
     </div>
     <p class="post-meta">
-        <a href="<%= post.permalink %>#comments" class="post-comments ds-thread-count" data-thread-key="<%- post.slug %>" data-count-type="comments"></a>
+        <% if (theme.gentie.enable) { %>
+        评论：<a href="<%- post.permalink %>#comments" class="post-comments">
+            <span 
+              lang="join-count" 
+              class="join-count" 
+              data-url="<%- post.permalink %>" 
+              data-sourceId="<%- post.slug %>"
+            >0</span>
+        </a>
+        <% } %>
         <!-- 标签 -->
         <span class="post-tags">
             标签：
@@ -56,3 +65,10 @@
         </span>
     </p>
 </article>
+<% if (theme.gentie.enable) { %>
+<!-- JavaScript 配置 -->
+<script>
+  var yunTieProductKey = "<%- theme.gentie.productKey %>";
+  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
+</script>
+<% } %>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     <%
     var title = page.title;
 
@@ -23,7 +24,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="<%- theme.SEO.keywords %>" >
     <meta name="description" content="<%- theme.SEO.description %>" >
-    <meta name="baidu-site-verification" content="dXIT3DPx0C" />
 
     <% if (theme.rss) { %>
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml" >
@@ -38,5 +38,8 @@
     <%- js('js/html5') %>
     <![endif]-->
     <%- partial('baidu-analytics') %>
-
+    <% if (theme.gentie.enable) { %>
+    <script>var yunModuleEnv = true;</script>
+    <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    <% } %>
 </head>

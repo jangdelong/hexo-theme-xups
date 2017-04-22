@@ -61,11 +61,16 @@ avatar: /img/jelon.jpg
 share: true
 
 #----------------------------
-# 是否使用多说评论框
+# 侧栏是否显示微博秀
 #----------------------------
-duoshuo:
+weibo_show: false
+
+#----------------------------
+# 是否使用网易云跟帖
+#----------------------------
+gentie:
   enable: true
-  short_name: jelon123
+  productKey: c06bb9930e6f4b38a9997cb9bd17aba5
 
 #----------------------------
 # 是否开启云标签
@@ -82,15 +87,11 @@ friends:
       name: Haoren博客
       title: 网络安全博客
       link: http://blog.sina.com.cn/u/1825875765
-    2: 
-      name: 微易服务平台
-      title: 让微营销更简单
-      link: http://www.wytone.com/
-    3:
+    2:
       name: Maxwell博客
       title: 技术博客
       link: http://blog.csdn.net/yeweiouyang
-    4:
+    3:
       name: 朱旋个人博客
       title: 技术博客
       link: http://xuanzh.cc/
@@ -103,8 +104,8 @@ head_links:
   list:
     sup:
       0:
-        name: 旧博客
-        link: http://jelon.kuphp.net
+        name: Coding
+        link: https://coding.net/u/jangdelong
       1:
         name: Github
         link: https://github.com/jangdelong
@@ -114,7 +115,7 @@ head_links:
     sub:
       sinaweibo:
         name: 新浪微博
-        link: http://weibo.com/u/5462713927
+        link: http://weibo.com/jangdelong
       qqweibo:
         name: Facebook
         link: https://www.facebook.com/profile.php?id=100011855760219&ref=bookmarks
@@ -122,7 +123,7 @@ head_links:
 # SEO
 #----------------------------
 SEO:
-  keywords: 前端, Web, Jelon, 张德龙
+  keywords: Jelon, 前端, Web, 张德龙, 前端开发
   description: Jelon个人前端小站
 
 #----------------------------

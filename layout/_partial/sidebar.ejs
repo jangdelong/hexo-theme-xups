@@ -2,14 +2,19 @@
 <aside class="sidebar">
     <section class="widget">
         <h3 class="widget-hd"><strong>文章分类</strong></h3>
-        <%- partial('_widget/category') %>
+        <%- partial('_widget/categorys') %>
     </section>
 
-    <% if (theme.duoshuo.enable) { %>
-    <!-- 最新评论 -->
     <section class="widget">
-        <h3 class="widget-hd"><strong>最近评论</strong></h3>
-        <%- partial('_widget/recent_comments') %>
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <%- partial('_widget/tags') %>
+    </section>
+
+    <% if (theme.weibo_show) { %>
+    <!-- 我的微博 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>我的微博</strong></h3>
+        <%- partial('_widget/weibo') %>
     </section>
     <% } %>
 
