@@ -5,10 +5,12 @@
         <%- partial('_widget/categorys') %>
     </section>
 
+    <% if (theme.tagcloud) { %>
     <section class="widget">
         <h3 class="widget-hd"><strong>热门标签</strong></h3>
         <%- partial('_widget/tags') %>
     </section>
+    <% } %>
 
     <% if (theme.weibo_show) { %>
     <!-- 我的微博 -->
