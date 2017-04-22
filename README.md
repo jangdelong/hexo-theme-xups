@@ -1,5 +1,5 @@
 # Xups 主题安装及 Hexo 使用教程
-
+![预览](./xups.png)
 ## 主题的一些特性
 
 1. [百度分析](http://tongji.baidu.com/web/welcome/login)
