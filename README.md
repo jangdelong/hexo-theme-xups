@@ -97,7 +97,7 @@
   
     ```
     
-    这部分是文章摘要，这部分是文章摘要。在hexo模版里可通过 <%- post.blogexcerpt || post.excerpt || post.content %> 来引用。
+    这部分是文章摘要，这部分是文章摘要。在hexo模版里可通过 `<%- post.blogexcerpt || post.excerpt || post.content %>` 来引用。
     - post.blogexcerpt：自定义摘要
     - post.excerpt：通过`<!-- more  -->`分隔符来获取的文章摘要
     - post.content：如不设置摘要情况，则直接输出文章全部内容
