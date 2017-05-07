@@ -40,12 +40,6 @@ subnav:
 rss: /atom.xml
 
 #----------------------------
-# Content
-#----------------------------
-excerpt_link: more
-fancybox: true
-
-#----------------------------
 # Favicon
 #----------------------------
 favicon: /favicon.ico
@@ -63,14 +57,16 @@ share: true
 #----------------------------
 # 侧栏是否显示微博秀
 #----------------------------
-weibo_show: false
+weibo_show:
+  enable: false
+  code: <iframe id="myWeibo" width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2376003112&verifier=796ea597&dpc=1"></iframe>
 
 #----------------------------
 # 是否使用网易云跟帖
 #----------------------------
 gentie:
   enable: true
-  productKey:
+  productKey: c06bb9930e6f4b38a9997cb9bd17aba5
 
 #----------------------------
 # 是否开启云标签
@@ -90,7 +86,7 @@ friends:
     2:
       name: Maxwell博客
       title: 技术博客
-      link: http://blog.csdn.net/yeweiouyang
+      link: http://ouyangyewei.me/
     3:
       name: 朱旋个人博客
       title: 技术博客
@@ -138,4 +134,4 @@ highlight_theme: normal
 #----------------------------
 # CDN
 #----------------------------
-CDN:
+CDN: //7xs305.com1.z0.glb.clouddn.com/
