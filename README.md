@@ -13,8 +13,8 @@
     ```
     npm i hexo-cli -g
     hexo init blog
-  cd blog
-  npm install
+    cd blog
+    npm install
     ```
 
 2. 将主题拉到本地，并解压
