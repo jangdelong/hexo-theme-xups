@@ -10,28 +10,28 @@
 
 1. 安装hexo
 
-    ```
-    npm i hexo-cli -g
-    hexo init blog
-    cd blog
-    npm install
-    ```
+  ```
+  npm i hexo-cli -g
+  hexo init blog
+  cd blog
+  npm install
+  ```
 
 2. 将主题拉到本地，并解压
 
-    ```
-    cd themes
-    git clone https://github.com/jangdelong/hexo-theme-xups.git
-    ```
+  ```
+  cd themes
+  git clone https://github.com/jangdelong/hexo-theme-xups.git
+  ```
 
 4. 配置 _config.yml 的 theme 配置
 
-    ```
-    theme: hexo-theme-xups
-    ```
-    另外，
-    如果你需保留原主题的关于页（about）、留言页面（comment）、实验室页（lab）的话，
-    请将 `_source/` 目录下的 `about/`、`comment`、`lab` 页面放到您的 Hexo 程序的 source。
+  ```
+  theme: hexo-theme-xups
+  ```
+  另外，
+  如果你需保留原主题的关于页（about）、留言页面（comment）、实验室页（lab）的话，
+  请将 `_source/` 目录下的 `about/`、`comment`、`lab` 页面放到您的 Hexo 程序的 source。
 
 5. 运行 `hexo s --watch`
   
@@ -41,7 +41,7 @@
   hexo s --watch
   ```
   
-    运行上述命令后，浏览器打开 [http://localhost:4000](http://localhost:4000) 即可本地访问我们的网站
+  运行上述命令后，浏览器打开 [http://localhost:4000](http://localhost:4000) 即可本地访问我们的网站
     
 ## 创建文章
 
@@ -68,43 +68,43 @@
    - 博客封面配图：200x140，命名：xxx_thumbnail
 4. 指明文章的标题、作者信息、封面图片地址、博客摘要
 
-    ```
-    ---
-    title: {{ title }}
-    date: {{ date }}
-    author:
-    tags:
-    categories:
-        - Web技术
-        - 生活琐事
-    thumbnail:
-    blogexcerpt:
+  ```
+  ---
+  title: {{ title }}
+  date: {{ date }}
+  author:
+  tags:
+  categories:
+      - Web技术
+      - 生活琐事
+  thumbnail:
+  blogexcerpt:
 
-    ---
+  ---
 
     ```
 5. 利用`<!-- more --> `或者`post.blogexcerpt`设置文章的摘要
 
-    示例：
-    
-    ```
-      
-    ---
-    title: 文章标题
-    blogexcerpt: 这里是自定义文章摘要
-    ... # 其他头部字段
-    ---
-    这里是文章正文内容
-    这里是文章正文内容
-    这里是文章正文内容
-    ...
+  示例：
   
-    ```
+  ```
     
-    这部分是文章摘要，这部分是文章摘要。在hexo模版里可通过 `<%- post.blogexcerpt || post.excerpt || post.content %>` 来引用。
-    - post.blogexcerpt：自定义摘要
-    - post.excerpt：通过`<!-- more  -->`分隔符来获取的文章摘要
-    - post.content：如不设置摘要情况，则直接输出文章全部内容
+  ---
+  title: 文章标题
+  blogexcerpt: 这里是自定义文章摘要
+  ... # 其他头部字段
+  ---
+  这里是文章正文内容
+  这里是文章正文内容
+  这里是文章正文内容
+  ...
+
+  ```
+  
+  这部分是文章摘要，这部分是文章摘要。在hexo模版里可通过 `<%- post.blogexcerpt || post.excerpt || post.content %>` 来引用。
+  - post.blogexcerpt：自定义摘要
+  - post.excerpt：通过`<!-- more  -->`分隔符来获取的文章摘要
+  - post.content：如不设置摘要情况，则直接输出文章全部内容
     
 ## 其他
 
