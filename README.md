@@ -30,8 +30,8 @@
   theme: hexo-theme-xups
   ```
   另外，
-  如果你需保留原主题的关于页（about）、留言页面（comment）、实验室页（lab）的话，
-  请将 `_source/` 目录下的 `about/`、`comment`、`lab` 页面放到您的 Hexo 程序的 source。
+  如果您需保留原主题的关于页（about）、留言页面（comment）、实验室页（lab）的话，
+  请将 `_source/` 目录下的 `about/`、`comment/`、`lab/` 页面放到您的 Hexo 程序的 `source` 目录下。
 
 5. 运行 `hexo s --watch`
   
