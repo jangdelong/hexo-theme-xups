@@ -31,7 +31,7 @@
   ```
   >另外，
   如果您需保留原主题的关于页（about）、留言页面（comment）、实验室页（lab）的话，
-  请将 `__source/` 目录下的 `about/`、`comment/`、`lab/` 三个目录及里面的页面放到您的 Hexo 程序的 `source` 目录下；将 `__scaffolds` 目录下的 `draft.md` `page.md` `post.md` 放到 Hexo 程序的 `scaffolds` 目录。
+  请将 `__source/` 目录下的 `about/`、`comment/`、`lab/` 三个目录及里面的页面放到您的 Hexo 程序的 `source` 目录下；将 `__scaffolds` 目录下的 `draft.md`、`page.md`、`post.md` 放到 Hexo 程序的 `scaffolds` 目录。
 
 5. 运行 `hexo s --watch`
   
