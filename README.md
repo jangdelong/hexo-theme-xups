@@ -120,7 +120,7 @@
 
     评论框使用
 
-    ```
+    ```
     <div id="comments" class="comment">
     </div>
     <script>
