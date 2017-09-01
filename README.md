@@ -13,8 +13,8 @@
     ```
     npm i hexo-cli -g
     hexo init blog
-  cd blog
-  npm install
+    cd blog
+    npm install
     ```
 
 2. 将主题拉到本地，并解压
@@ -32,11 +32,11 @@
 
 5. 运行 `hexo s --watch`
 
-  ```
-  cd ..
-  hexo generate # 或者 hexo g
-  hexo s --watch
-  ```
+    ```
+    cd ..
+    hexo generate # 或者 hexo g
+    hexo s --watch
+    ```
 
     运行上述命令后，浏览器打开 [http://localhost:4000](http://localhost:4000) 即可本地访问我们的网站
 
@@ -48,13 +48,13 @@
 
 1. 使用`hexo new` 命令
 
-  ``` bash
-  $ hexo new "My New Post"
-  ```
+    ``` bash
+    $ hexo new "My New Post"
+    ```
 
 2. 拷贝现有的文章进行修改
 
-  hexo使用markdown来编辑文章，在source目录下，拷贝任意md文件进行创建新的文章。具体可参考下hexo的官方说明
+    hexo使用markdown来编辑文章，在source目录下，拷贝任意md文件进行创建新的文章。具体可参考下hexo的官方说明
 
 ## 文章规范
 
