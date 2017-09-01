@@ -106,7 +106,7 @@
 
     主题 _config.yml 配置
 
-    ``` python
+    ```shell
     #----------------------------
     # 是否开启评论
     #----------------------------
@@ -120,7 +120,7 @@
 
     评论框使用
 
-    ``` javascript
+    ```html
     <div id="comments" class="comment">
     </div>
     <script>
