@@ -116,7 +116,6 @@
       repo: blog_comments # github repository
       client_id: xxxxxxxxxx # github application client id
       client_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # github application secret
-
     ```
 
     评论框使用
