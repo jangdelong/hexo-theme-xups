@@ -122,7 +122,7 @@
     评论框使用
 
 
-    ```html
+    ```xml
     <div id="comments" class="comment">
     </div>
     <script>
