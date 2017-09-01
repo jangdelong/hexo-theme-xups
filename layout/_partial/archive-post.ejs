@@ -1,6 +1,7 @@
 <!-- 文章 -->
 <article class="post">
     <header>
+        <!-- 标签这有且只能显示一个 -->
         <% if (post.categories && post.categories.length) { %>
         <%-
             list_categories(post.categories, {
@@ -8,7 +9,7 @@
                 class: 'cat',
                 style: 'none',
                 separator: '|'
-            })
+            }).split('|')[0]
         %>
         <% } else { %>
             <a href="javascript: void(0);" class="cat">未分类</a>
@@ -19,6 +20,11 @@
     <p class="post-meta">
         <%- post.author || 'Jelon' %> 发表于
         <%- partial('post/date', { date_format: 'YYYY-MM-DD' }) %>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            <%- partial('post/tag') %>
+        </span>
     </p>
 
     <div class="post-content">
@@ -47,28 +53,4 @@
             </a>
         </div>
     </div>
-    <p class="post-meta">
-        <% if (theme.gentie.enable) { %>
-        评论：<a href="<%- post.permalink %>#comments" class="post-comments">
-            <span 
-              lang="join-count" 
-              class="join-count" 
-              data-url="<%- post.permalink %>" 
-              data-sourceId="<%- post.slug %>"
-            >0</span>
-        </a>
-        <% } %>
-        <!-- 标签 -->
-        <span class="post-tags">
-            标签：
-            <%- partial('post/tag') %>
-        </span>
-    </p>
 </article>
-<% if (theme.gentie.enable) { %>
-<!-- JavaScript 配置 -->
-<script>
-  var yunTieProductKey = "<%- theme.gentie.productKey %>";
-  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
-</script>
-<% } %>

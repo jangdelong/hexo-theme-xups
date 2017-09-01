@@ -62,11 +62,14 @@ weibo_show:
   code: <iframe id="myWeibo" width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2376003112&verifier=796ea597&dpc=1"></iframe>
 
 #----------------------------
-# 是否使用网易云跟帖
+# 是否开启评论
 #----------------------------
-gentie:
-  enable: true
-  productKey: c06bb9930e6f4b38a9997cb9bd17aba5
+comment:
+  enable: false
+  owner: jangdelong  # 你的 github 账户名
+  repo: blog_comments # github repository
+  client_id: xxxxxxxxxx # github application client id
+  client_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # github application secret
 
 #----------------------------
 # 是否开启云标签
@@ -86,7 +89,7 @@ friends:
     2:
       name: Maxwell博客
       title: 技术博客
-      link: http://ouyangyewei.me/
+      link: http://blog.csdn.net/yeweiouyang
     3:
       name: 朱旋个人博客
       title: 技术博客

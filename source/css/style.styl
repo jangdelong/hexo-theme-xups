@@ -1,6 +1,7 @@
 @charset "UTF-8"
 @import "_variables"
 @import "_extend"
+$comment_config = hexo-config("comment.enable")
 
 // 字体样式
 //-----------------------------------------------
@@ -46,6 +47,11 @@
 // 博客底部样式
 //-----------------------------------------------
 @import "_partial/footer"
+
+// 评论框样式
+//-----------------------------------------------
+if $comment_config
+  @import "_partial/comment"
 
 // 响应式样式
 //-----------------------------------------------

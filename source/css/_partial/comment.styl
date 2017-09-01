@@ -1,0 +1,183 @@
+.comment
+  margin-top 10px
+  box-sizing border-box
+  .box
+    position relative
+    width 100%
+    .com-avatar
+     position absolute
+     top 2px
+     left 0
+     width 40px
+     height 40px
+     img
+      width 100%
+      height 100%
+      border none
+      border-radius 50%
+    .com-text
+      position relative
+      margin-left 45px
+      height 120px
+      border 2px solid c-eee
+      box-sizing border-box
+      border-radius 2px
+      .switch
+        position absolute
+        right -2px
+        top -2px
+        width 81px
+        height 10px
+        line-height 10px
+        padding 5px 0
+        .switch-item
+          float left
+          width 40px
+          height @height
+          color c-999
+          text-center()
+          font-size 10px
+          cursor pointer
+          opacity .8
+        :first-child
+          border-right 1px solid c-ccc
+        .on
+          color #ff5e52
+      .main
+        margin 0
+        padding 0
+        .text-area-edited
+          display none
+          width 100%
+          height 116px
+          padding 10px
+          border none
+          box-sizing border-box
+          outline none
+          resize none
+        .text-area-preview
+          display none
+          width 100%
+          height 116px
+          padding 10px
+          border none
+          box-sizing border-box
+          overflow auto
+          @extend $base-style
+          p
+            margin 0
+        .show
+          display block
+      .button
+        position absolute
+        bottom -2px
+        right -2px
+        width 100px
+        height 30px
+        line-height @height
+        border-radius 0 0 2px 0
+        color c-fff
+        background-color #ff5e52
+        text-align center
+        opacity .8
+        cursor pointer
+      .button:hover
+        opacity .7
+  .sign-bar
+    height 30px
+    line-height @height
+    text-align right
+    font-size 12px
+    .sign-link
+      margin-left 5px
+      color #ff5e52
+      cursor pointer
+      border none
+    .sign-txt
+      color c-999
+  .tips
+    height 30px
+    line-height @height
+    margin-left 45px
+    font-size 12px
+    color c-999
+    .init
+      color c-999
+      float right
+  .list-wrap
+    margin-top 10px
+    .list-header
+      margin 0
+      padding 0 0 0 15px
+      font-size 12px
+      border-left 2px solid c-eee
+      .comments-num
+        color #ff5e52
+        font-size 14px
+    .list
+      list-style-type none
+      margin 0
+      padding 0
+      .item
+        position relative
+        margin 10px 0
+        border-bottom 1px solid c-eee
+      .user-avatar
+        position absolute
+        top 0
+        left 0
+        width 40px
+        height 40px
+        img
+          width 100%
+          height 100%
+          border none
+          border-radius 50%
+        a
+          border none
+      .user-comment
+        min-height 50px
+        margin-left 50px
+        .user-comment-body
+          margin 5px 0
+          color c-666
+          @extend $base-style
+          p
+            margin 0
+          a
+            border none
+            color #ff5e52
+        .user-comment-header
+          color c-aaa
+          span
+            margin-right 5px
+          .post-name
+            font-size 12px
+          .post-time
+            font-size 10px
+          .like
+            font-size 10px
+            color #ff5e52
+            cursor pointer
+          .like.liked
+            color c-aaa
+          .like-num
+            font-size 10px
+  .page-nav
+    margin-top 10px
+    text-align right
+    .item
+      display inline-block
+      height 10px
+      line-height @height
+      margin 0 2px
+      padding 8px 10px
+      font-size 10px
+      background-color c-eee
+      opacity .8
+      text-align center
+      border none
+    .item.current
+      color c-fff
+      background-color #ff5e52
+      cursor not-allowed

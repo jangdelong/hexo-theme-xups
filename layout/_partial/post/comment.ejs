@@ -1,13 +1,15 @@
-<% if (theme.gentie.enable) { %>
-    <div id="comments" class="comments cloud-tie-wrapper"></div>
-    <script>
-    var cloudTieConfig = {
-      url: document.location.href, 
-      sourceId: "<%- post.slug %>",
-      productKey: "<%- theme.gentie.productKey %>",
-      target: "comments"
-    };
-    var yunManualLoad = true;
-    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-    </script>
+<% if (theme.comment.enable) { %>
+  <%- js('js/comment') %>
+  <div id="comments" class="comment">
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '<%- post.slug %>' || '<%- post.path %>',
+    owner: '<%- theme.comment.owner %>',
+    repo: '<%- theme.comment.repo %>',
+    clientId: '<%- theme.comment.client_id %>',
+    clientSecret: '<%- theme.comment.client_secret %>'
+  });
+  </script>
 <% } %>
