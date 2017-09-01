@@ -104,36 +104,36 @@
 
 ## 评论框配置
 
-    1. 主题 _config.yml 配置
-    
-        ```
-        #----------------------------
-        # 是否开启评论
-        #----------------------------
-        comment:
-          enable: false      # 是否开启配置
-          owner: jangdelong  # 你的 github 账户名
-          repo: blog_comments # github repository
-          client_id: xxxxxxxxxx # github application client id
-          client_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # github application secret
-        ```
+1. 主题 _config.yml 配置
 
-    2. 评论框使用
+    ```
+    #----------------------------
+    # 是否开启评论
+    #----------------------------
+    comment:
+      enable: false      # 是否开启配置
+      owner: jangdelong  # 你的 github 账户名
+      repo: blog_comments # github repository
+      client_id: xxxxxxxxxx # github application client id
+      client_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # github application secret
+    ```
 
-        ```
-        <div id="comments" class="comment">
-        </div>
-        <script>
-        JELON.Comment({
-          container: 'comments',
-          label: '<%- post.slug %>' || '<%- post.path %>',
-          owner: '<%- theme.comment.owner %>',
-          repo: '<%- theme.comment.repo %>',
-          clientId: '<%- theme.comment.client_id %>',
-          clientSecret: '<%- theme.comment.client_secret %>'
-        });
-        </script>
-        ```
+2. 评论框使用
+
+    ```
+    <div id="comments" class="comment">
+    </div>
+    <script>
+    JELON.Comment({
+      container: 'comments',
+      label: '<%- post.slug %>' || '<%- post.path %>',
+      owner: '<%- theme.comment.owner %>',
+      repo: '<%- theme.comment.repo %>',
+      clientId: '<%- theme.comment.client_id %>',
+      clientSecret: '<%- theme.comment.client_secret %>'
+    });
+    </script>
+    ```
 
 ## 其他
 
