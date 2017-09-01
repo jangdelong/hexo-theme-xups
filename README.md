@@ -1,10 +1,10 @@
 # Xups 主题安装及 Hexo 使用教程
 ![预览](./xups.png)
+
 ## 主题的一些特性
 
-1. [百度分析](http://tongji.baidu.com/web/welcome/login)
-2. [基于 github issues实现的评论框](http://jelon.top/posts/xups-comment-box/)
-3. 博客图片存储于[七牛云存储](http://www.qiniu.com/)
+1. 扁平。思路源于大前端 WordPress 主题。
+2. 自带博客评论系统。博客主题自带评论系统，基于 github issues 实现，了解更多请点击[基于 github issues实现的评论框](http://jelon.top/posts/xups-comment-box/)。
 
 ## 使用指引
 
@@ -102,7 +102,7 @@
     - post.excerpt：通过`<!-- more  -->`分隔符来获取的文章摘要
     - post.content：如不设置摘要情况，则直接输出文章全部内容
 
-## 评论框配置
+## 评论系统
 
 1. 主题 _config.yml 配置
 
