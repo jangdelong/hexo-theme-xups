@@ -125,12 +125,12 @@
     </div>
     <script>
     JELON.Comment({
-      container: 'comments',
-      label: '<%- post.slug %>' || '<%- post.path %>',
-      owner: '<%- theme.comment.owner %>',
-      repo: '<%- theme.comment.repo %>',
-      clientId: '<%- theme.comment.client_id %>',
-      clientSecret: '<%- theme.comment.client_secret %>'
+      container: 'comments', // 评论框容器id或对象，留空是默认为 comments 
+      label: '<%- post.slug %>' || '<%- post.path %>',  // 文章标签
+      owner: '<%- theme.comment.owner %>', // GitHub application 创建者
+      repo: '<%- theme.comment.repo %>', // issue 所在仓库名
+      clientId: '<%- theme.comment.client_id %>', // GitHub application client_id
+      clientSecret: '<%- theme.comment.client_secret %>' // GitHub application client_secret
     });
     </script>
     ```
