@@ -1,5 +1,5 @@
 #############################
-# Xups for Hexo主题配置文件
+# Xups for Hexo 主题配置文件
 # Jelon
 # http://jelon.top
 #############################
@@ -65,11 +65,11 @@ weibo_show:
 # 是否开启评论
 #----------------------------
 comment:
-  enable: false
-  owner: jangdelong  # 你的 github 账户名
-  repo: blog_comments # github repository
-  client_id: xxxxxxxxxx # github application client id
-  client_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # github application secret
+  enable: true
+  owner: jangdelong
+  repo: blog_comments
+  client_id: b08ed25e52c57993e69c
+  client_secret: 1cb9545488f0380904b87350e7c5a270ae03bab7
 
 #----------------------------
 # 是否开启云标签
@@ -103,14 +103,11 @@ head_links:
   list:
     sup:
       0:
-        name: Coding
-        link: https://coding.net/u/jangdelong
-      1:
         name: Github
         link: https://github.com/jangdelong
       last:
-        name: 百度统计
-        link: http://tongji.baidu.com/web/welcome/login
+        name: Hosted by Coding Pages
+        link: https://pages.coding.me
     sub:
       sinaweibo:
         name: 新浪微博
@@ -136,5 +133,9 @@ baidu_analytics: true
 highlight_theme: normal
 #----------------------------
 # CDN
+# 如: //7xs305.com1.z0.glb.clouddn.com/
+# 主要以下两个目录进行 cdn 存储
+#   - img 图片资源下的 thumbnail 目录
+#   - css 样式资源下的 fonts 目录
 #----------------------------
-CDN: //7xs305.com1.z0.glb.clouddn.com/
+CDN:

@@ -104,7 +104,9 @@
 
 ## 评论系统
 
-1. 主题 _config.yml 配置
+1. 创建 Github Application
+2. 创建仓库
+3. 主题 _config.yml 配置
 
     ```python
     #----------------------------
@@ -117,8 +119,7 @@
       client_id: xxxxxxxxxx # github application client id
       client_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # github application secret
     ```
-
-2. 评论框使用
+4. 评论框使用
 
     ```html
     <div id="comments" class="comment">
