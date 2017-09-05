@@ -24,13 +24,13 @@
     git clone https://github.com/jangdelong/hexo-theme-xups.git
     ```
 
-4. 配置 _config.yml 的 theme 配置
+3. 配置 _config.yml 的 theme 配置
 
     ```
     theme: hexo-theme-xups
     ```
 
-5. 运行 `hexo s --watch`
+4. 运行 `hexo s --watch`
 
     ```
     cd ..
