@@ -535,7 +535,7 @@ var JELON = window.JELON || {};
               localStorage.removeItem(constants.USER_INFO_KEY);
               JL.Renders.signBar.update();
               JL.Renders.box.update();
-              location.reload();
+              console.warn('登录失败，请稍后刷新再试');
             } else {
               JL.Renders.list.update(1, 0, []);
               JL.Renders.tips.update();
