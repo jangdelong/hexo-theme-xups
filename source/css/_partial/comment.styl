@@ -149,6 +149,7 @@
             color #ff5e52
         .user-comment-header
           color c-aaa
+          position relative
           span
             margin-right 5px
           .post-name
@@ -163,6 +164,17 @@
             color c-aaa
           .like-num
             font-size 10px
+          .reply
+            position absolute
+            display none
+            right 0
+            top 2px
+            font-size 10px
+            cursor pointer
+        &:hover
+          .user-comment-header
+            .reply
+              display block
   .page-nav
     margin-top 10px
     text-align right

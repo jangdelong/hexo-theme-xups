@@ -267,6 +267,7 @@ var JELON = window.JELON || {};
                     '<span class="post-time">' + formatDate('yyyy-MM-dd hh:mm', new Date(list[i].created_at)) + '</span>',
                     '<span class="like" onclick="JELON.Actions.like(' + list[i].id + ')">点赞</span>',
                     '<span class="like-num">' + list[i].reactions.heart + '</span>',
+                    '<span class="reply" onclick="JELON.Actions.reply(\'' + list[i].user.login + '\', \'' + (list[i].body_html.replace(/<[^>]+>/g, '') || list[i].body.replace(/<[^>]+>/g,'')) + '\')">回复</span>',
                   '</div>',
                   '<div class="user-comment-body">' + (list[i].body_html || list[i].body) + '</div>',
                 '</div>',
@@ -388,6 +389,7 @@ var JELON = window.JELON || {};
               '<span class="post-time">' + formatDate('yyyy-MM-dd hh:mm', new Date(data.created_at)) + '</span>',
               '<span class="like" onclick="JELON.Actions.like(' + data.reactions.heart + ')">点赞</span>',
               '<span class="like-num">' + data.reactions.heart + '</span>',
+              '<span class="reply" onclick="JELON.Actions.reply(\'' + data.user.login + '\', \'' + (data.body_html.replace(/<[^>]+>/g, '') || data.body.replace(/<[^>]+>/g, '')) + '\')">回复</span>',
             '</div>',
             '<div class="user-comment-body">' + (data.body_html || data.body) + '</div>',
           '</div>'
@@ -671,6 +673,20 @@ var JELON = window.JELON || {};
         }
         JL.Renders.loading.remove();
       });
+    },
+    reply: function (people, content) {
+      var accessToken = localStorage.getItem(constants.ACCESS_TOKEN_KEY);
+      var userInfo = localStorage.getItem(constants.USER_INFO_KEY);
+      if (!accessToken || !userInfo) {
+        return;
+      }
+      JL.Actions.editPreviewSwitch('edit');
+      $('JELON__editBox').value = [
+        '@' + people + '\n',
+        '> ' + content + '\n'
+      ].join('');
+      $('JELON__previewBox').innerHTML = '';
+      $('JELON__editBox').focus();
     }
   };
   JL.Requests = {
