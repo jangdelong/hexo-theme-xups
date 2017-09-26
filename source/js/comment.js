@@ -685,7 +685,8 @@ var JELON = window.JELON || {};
       $('JELON__editBox').focus();
       $('JELON__editBox').value = [
         '@' + people + '\n',
-        '> ' + content + '\n'
+        '> ' + content + '\n',
+        '\n'
       ].join('');
       $('JELON__previewBox').innerHTML = '';
     }
