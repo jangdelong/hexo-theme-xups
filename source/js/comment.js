@@ -494,7 +494,10 @@ var JELON = window.JELON || {};
           client_secret: JL.options.clientSecret,
           code: code
         }, function (res) {
-          if (res.access_token) {
+          if (res.access_token || res.data) {
+            if (res.data) {
+              res.access_token = res.data.access_token;
+            }
             localStorage.setItem(constants.ACCESS_TOKEN_KEY, res.access_token);       // 保存 access_token 至 localStorage
             JL.Requests.getUserInfo({ access_token: res.access_token }, function (res) {
               if (res.login) {
@@ -813,8 +816,12 @@ var JELON = window.JELON || {};
     },
     getAccessToken: function (data, callback) {
       ajax({
-        url: 'https://gh-oauth.imsun.net/',
+        // url: 'https://gh-oauth.imsun.net/',
+        url: 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token',
         method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
         data: data,
         success: function (res) {
           if (typeof res === 'string') {
