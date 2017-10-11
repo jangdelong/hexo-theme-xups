@@ -267,7 +267,7 @@ var JELON = window.JELON || {};
                     '<span class="post-time">' + formatDate('yyyy-MM-dd hh:mm', new Date(list[i].created_at)) + '</span>',
                     '<span class="like" onclick="JELON.Actions.like(' + list[i].id + ')">点赞</span>',
                     '<span class="like-num">' + list[i].reactions.heart + '</span>',
-                    '<span class="reply" onclick="JELON.Actions.reply(\'' + list[i].user.login + '\', \'' + (list[i].body_html || list[i].body).replace(/<[^>]+>|\s|[\r\n]/g, '') + '\')">回复</span>',
+                    '<span class="reply" onclick="JELON.Actions.reply(\'' + list[i].user.login + '\', \'' + (list[i].body_html || list[i].body).replace(/<[^>]+>|\s|[\r\n]/g, ' ') + '\')">回复</span>',
                   '</div>',
                   '<div class="user-comment-body">' + (list[i].body_html || list[i].body) + '</div>',
                 '</div>',
@@ -389,7 +389,7 @@ var JELON = window.JELON || {};
               '<span class="post-time">' + formatDate('yyyy-MM-dd hh:mm', new Date(data.created_at)) + '</span>',
               '<span class="like" onclick="JELON.Actions.like(' + data.reactions.heart + ')">点赞</span>',
               '<span class="like-num">' + data.reactions.heart + '</span>',
-              '<span class="reply" onclick="JELON.Actions.reply(\'' + data.user.login + '\', \'' + (data.body_html || data.body).replace(/<[^>]+>|\s|[\r\n]/g, '') + '\')">回复</span>',
+              '<span class="reply" onclick="JELON.Actions.reply(\'' + data.user.login + '\', \'' + (data.body_html || data.body).replace(/<[^>]+>|\s|[\r\n]/g, ' ') + '\')">回复</span>',
             '</div>',
             '<div class="user-comment-body">' + (data.body_html || data.body) + '</div>',
           '</div>'
