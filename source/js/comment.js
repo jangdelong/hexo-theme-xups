@@ -288,10 +288,10 @@ var JELON = window.JELON || {};
               pageList.push(pageItem);
             }
             if (page !== 1) {
-              pageList.unshift('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上一页</a>');
+              pageList.unshift('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上页</a>');
             }
             if (page !== allPages) {
-              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下一页</a>');
+              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下页</a>');
             }
           } else if (allPages > perNavPageMaxSize) {
             if (page <= perNavPageMaxSize) {
@@ -304,17 +304,17 @@ var JELON = window.JELON || {};
                 pageList.push(pageItem);
               }
               if (page !== 1) {
-                pageList.unshift('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上一页</a>');
+                pageList.unshift('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上页</a>');
               }
-              pageList.push('<a href="javascript: void(0);" class="item">...</a>');
-              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下一页</a>');
+              pageList.push('<span class="more">...</span>');
+              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下页</a>');
               pageList.push('<a href="javascript: JELON.Actions.pageJump(' + allPages + ');" class="item">末页</a>');
             } else if (page > perNavPageMaxSize && page <= allPages - perNavPageMaxSize) {
               var mod = page % perNavPageMaxSize;
               var start = Math.floor(page / perNavPageMaxSize) * perNavPageMaxSize + 1;
               var end = Math.ceil(page / perNavPageMaxSize) * perNavPageMaxSize;
               pageList.push('<a href="javascript: JELON.Actions.pageJump(1);" class="item">首页</a>');
-              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上一页</a>');
+              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上页</a>');
               for (var i = start; i <= end; i++) {
                 if (i === page) {
                   pageItem = '<a href="javascript: void(0);" class="item current">' + page + '</a>';
@@ -324,14 +324,14 @@ var JELON = window.JELON || {};
                 pageList.push(pageItem);
               }
 
-              pageList.push('<a href="javascript: void(0);" class="item">...</a>');
-              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下一页</a>');
+              pageList.push('<span class="more">...</span>');
+              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下页</a>');
               pageList.push('<a href="javascript: JELON.Actions.pageJump(' + allPages + ');" class="item">末页</a>');
             } else if (page > perNavPageMaxSize && page > allPages - perNavPageMaxSize) {
               var start = allPages - perNavPageMaxSize + 1;
               var end = allPages;
               pageList.push('<a href="javascript: JELON.Actions.pageJump(1);" class="item">首页</a>');
-              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上一页</a>');
+              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上页</a>');
               for (var i = start; i <= end; i++) {
                 if (i === page) {
                   pageItem = '<a href="javascript: void(0);" class="item current">' + page + '</a>';
@@ -341,7 +341,7 @@ var JELON = window.JELON || {};
                 pageList.push(pageItem);
               }
               if (page !== allPages) {
-                pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下一页</a>');
+                pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下页</a>');
               }
             }
           }
