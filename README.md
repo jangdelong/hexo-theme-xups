@@ -142,3 +142,7 @@
 ## 其他
 
 - [Jelon前端小站](http://jelon.top)
+
+## LICENCE
+
+The MIT License (MIT)
