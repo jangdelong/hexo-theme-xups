@@ -306,6 +306,7 @@ var JELON = window.JELON || {};
               if (page !== 1) {
                 pageList.unshift('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上一页</a>');
               }
+              pageList.push('<a href="javascript: void(0);" class="item">...</a>');
               pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下一页</a>');
               pageList.push('<a href="javascript: JELON.Actions.pageJump(' + allPages + ');" class="item">末页</a>');
             } else if (page > perNavPageMaxSize && page <= allPages - perNavPageMaxSize) {
@@ -322,6 +323,8 @@ var JELON = window.JELON || {};
                 }
                 pageList.push(pageItem);
               }
+
+              pageList.push('<a href="javascript: void(0);" class="item">...</a>');
               pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下一页</a>');
               pageList.push('<a href="javascript: JELON.Actions.pageJump(' + allPages + ');" class="item">末页</a>');
             } else if (page > perNavPageMaxSize && page > allPages - perNavPageMaxSize) {
