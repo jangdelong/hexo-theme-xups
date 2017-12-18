@@ -119,6 +119,16 @@ var JELON = window.JELON || {};
     }
     return format;
   };
+  var htmlEncode = function (str) {
+    if (typeof str !== 'string') return;
+    str = str.replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\"/g, '&quot;')
+        .replace(/\'/g, '&#39;')
+        .replace(/ /g, '&nbsp;');
+    return str;
+  };
 
   /**
    * 封装ajax函数
@@ -586,6 +596,8 @@ var JELON = window.JELON || {};
         removeClass('JELON__editBox', 'show');
         addClass('JELON__previewBox', 'show');
         var text = $('JELON__editBox').value.trim();
+        // 安全转义
+        text = htmlEncode(text);
         if (text) {
           JL.Requests.markdown({
             text: text,
@@ -607,6 +619,8 @@ var JELON = window.JELON || {};
         return;
       }
       var body = $('JELON__editBox').value.trim();
+      // 安全转义
+      body = htmlEncode(body);
       if (body) {
         JL.Renders.loading.create();
         if (JL.issueNumber !== 0) {
