@@ -123,7 +123,7 @@ var JELON = window.JELON || {};
     if (typeof str !== 'string') return;
     str = str.replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
+        // .replace(/>/g, '&gt;')
         .replace(/\"/g, '&quot;')
         .replace(/\'/g, '&#39;')
         .replace(/ /g, '&nbsp;');
