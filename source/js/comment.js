@@ -13,7 +13,7 @@ if (!window['String']['prototype']['trim']) {
     root.JELON = factory();
   }
 }(this, function () {
-  var JL= window.JELON || {};
+  var JL = window.JELON || {};
 
   var constants = {
     ACCESS_TOKEN_KEY: 'xups-github-comments-token', // access_token key
