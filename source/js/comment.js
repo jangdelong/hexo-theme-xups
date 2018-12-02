@@ -3,8 +3,18 @@ if (!window['String']['prototype']['trim']) {
     return this.replace(/^\s+|\s+$/g, '');
   };
 }
-var JELON = window.JELON || {};
-;(function (JL) {
+
+;(function (root, factory) {
+  if (typeof define === 'function' && define.amd) { // amd
+    define(factory);
+  } else if (typeof exports === 'object') { // cmd
+    module.exports = factory();
+  } else {
+    root.JELON = factory();
+  }
+}(this, function () {
+  var JL= window.JELON || {};
+
   var constants = {
     ACCESS_TOKEN_KEY: 'xups-github-comments-token', // access_token key
     USER_INFO_KEY: 'xups-github-user-info',         // 登录用户信息 key
@@ -576,7 +586,9 @@ var JELON = window.JELON || {};
         JL.Renders.list.update(page, JL.issueComments, list, function () {
           for (var i = 0, len = list.length; i < len; i++) {
             (function (commentId) {
-              JL.Requests.getReactionsByCommentId(commentId, { content: 'heart' }, function (reactions) {
+              JL.Requests.getReactionsByCommentId(commentId, {
+                content: 'heart'
+              }, function (reactions) {
                 JL.Renders.list.reactionUpdate(commentId, reactions);
               });
             }(list[i].id));
@@ -940,4 +952,6 @@ var JELON = window.JELON || {};
     ].join('');
     JL.Actions.init();
   };
-})(JELON);
+
+  return JL;
+}));  
