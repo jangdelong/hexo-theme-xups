@@ -1,4 +1,4 @@
-<!-- 文章 -->
+<!-- 文章列表 item -->
 <article class="post">
     <header>
         <!-- 标签这有且只能显示一个 -->
@@ -15,15 +15,15 @@
             <a href="javascript: void(0);" class="cat">未分类</a>
         <% } %>
         <!-- 文章标题 -->
-        <%- partial('post/title', { class_name: 'post-title' }) %>
+        <%- partial('title', { class_name: 'post-title' }) %>
     </header>
     <p class="post-meta">
         <%- post.author || 'Jelon' %> 发表于
-        <%- partial('post/date', { date_format: 'YYYY-MM-DD' }) %>
+        <%- partial('date', { date_format: 'YYYY-MM-DD' }) %>
         &nbsp;&nbsp;
         <span class="post-tags">
             标签：
-            <%- partial('post/tag') %>
+            <%- partial('tag') %>
         </span>
     </p>
 

@@ -14,7 +14,7 @@
         </strong>
     </h3>
     <% page.posts.each(function(post) { %>
-        <%- partial('archive-post', { post: post }) %>
+        <%- partial('post/post-item', { post: post }) %>
     <% }) %>
 
     <% if (page.total >= 1){ %>

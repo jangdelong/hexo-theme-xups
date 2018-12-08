@@ -2,5 +2,5 @@
 <% if (page.content) { %>
     <%- page.content %>
 <% } else { %>
-    <%- partial('_partial/router', { pagination: 2, index: true }) %>
+    <%- partial('_partial/post-list', { pagination: 2, index: true }) %>
 <% } %>
