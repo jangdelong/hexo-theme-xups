@@ -66,10 +66,10 @@ weibo_show:
 #----------------------------
 comment:
   enable: true
-  owner: jangdelong
-  repo: blog_comments
-  client_id: b08ed25e52c57993e69c
-  client_secret: 1cb9545488f0380904b87350e7c5a270ae03bab7
+  owner: your_github_id
+  repo: your_blog_comments
+  client_id: your_client_id
+  client_secret: your_client_secret
 
 #----------------------------
 # 是否开启云标签
@@ -83,17 +83,13 @@ friends:
   enable: true
   list:
     1:
-      name: Haoren博客
-      title: 网络安全博客
-      link: http://blog.sina.com.cn/u/1825875765
+      name: 前端博客小站
+      title: Jelon个人前端小站
+      link: https://jelon.top
     2:
-      name: Maxwell博客
-      title: 技术博客
-      link: http://blog.csdn.net/yeweiouyang
-    3:
-      name: 朱旋个人博客
-      title: 技术博客
-      link: http://xuanzh.cc/
+      name: 百度
+      title: 百度搜索
+      link: https://www.baidu.com
 
 #----------------------------
 # 头部链接
