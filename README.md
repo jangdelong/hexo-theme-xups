@@ -141,7 +141,7 @@
 
 ## 其他
 
-- [Jelon前端小站](http://jelon.top)
+- [Jelon前端小站](http://jelon.info)
 
 ## LICENCE
 
