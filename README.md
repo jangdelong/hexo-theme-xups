@@ -4,7 +4,7 @@
 ## 主题的一些特性
 
 1. 扁平。思路源于大前端 WordPress 主题。
-2. 自带博客评论系统。博客主题自带评论系统，基于 github issues 实现，了解更多请点击[基于 github issues实现的评论框](http://jelon.top/posts/xups-comment-box/)。
+2. 自带博客评论系统。博客主题自带评论系统，基于 github issues 实现，了解更多请点击[基于 github issues实现的评论框](http://jelon.info/posts/xups-comment-box/)。
 
 ## 使用指引
 
