@@ -1,7 +1,7 @@
 #############################
 # Xups for Hexo 主题配置文件
 # Jelon
-# https://jelon.top
+# http://jelon.top
 #############################
 
 #----------------------------
@@ -66,10 +66,10 @@ weibo_show:
 #----------------------------
 comment:
   enable: true
-  owner: your_github_id
-  repo: your_blog_comments
-  client_id: your_client_id
-  client_secret: your_client_secret
+  owner: jangdelong
+  repo: blog_comments
+  client_id: b08ed25e52c57993e69c
+  client_secret: 1cb9545488f0380904b87350e7c5a270ae03bab7
 
 #----------------------------
 # 是否开启云标签
@@ -83,14 +83,9 @@ friends:
   enable: true
   list:
     1:
-      name: 前端博客小站
-      title: Jelon个人前端小站
-      link: https://jelon.top
-    2:
-      name: 百度
-      title: 百度搜索
-      link: https://www.baidu.com
-
+      name: Github博客
+      title: Github博客
+      link: https://github.com/front-end-pigs/blog
 #----------------------------
 # 头部链接
 #----------------------------
@@ -135,3 +130,10 @@ highlight_theme: normal
 #   - css 样式资源下的 fonts 目录
 #----------------------------
 CDN:
+
+#----------------------------
+# 是否开启搜索
+#----------------------------
+search:
+  enable: true
+  placeholder: 输入关键字搜索

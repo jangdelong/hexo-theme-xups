@@ -163,6 +163,7 @@ JELON = deepCopy(JELON, {
         console.log(element, 'has been', op + 'ed')
       }
     });
+    this.initSearch();
   },
   $: function(str) {
     return /^(\[object HTML)[a-zA-Z]*(Element\])$/.test(Object.prototype.toString.call(str)) ? str : document.getElementById(str);
@@ -201,6 +202,25 @@ JELON = deepCopy(JELON, {
         }
       }
     };
+  },
+  initSearch: function () {
+    var _this = this;
+    if (document.getElementById('searchKeyword') && document.getElementById('searchButton')) {
+      document.getElementById('searchKeyword').onkeyup = function (e) {
+        var e = e || window.event
+        var keyCode = e.keyCode || e.which
+        if (keyCode === 13) {
+          _this.startSearch();
+        }
+      }
+      document.getElementById('searchButton').onclick = _this.startSearch;
+    }
+  },
+  startSearch: function () {
+    if (document.getElementById('searchKeyword').value) {
+      document.getElementById('searchKeywordHidden').value = 'site:jelon.info ' + document.getElementById('searchKeyword').value;
+      document.getElementById('searchForm').submit();
+    }
   }
 });
 

@@ -132,11 +132,11 @@ if (!window['String']['prototype']['trim']) {
   var htmlEncode = function (str) {
     if (typeof str !== 'string') return;
     str = str.replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      // .replace(/>/g, '&gt;')
-      .replace(/\"/g, '&quot;')
-      .replace(/\'/g, '&#39;')
-      .replace(/ /g, '&nbsp;');
+        .replace(/</g, '&lt;')
+        // .replace(/>/g, '&gt;')
+        .replace(/\"/g, '&quot;')
+        .replace(/\'/g, '&#39;')
+        .replace(/ /g, '&nbsp;');
     return str;
   };
 
@@ -954,4 +954,4 @@ if (!window['String']['prototype']['trim']) {
   };
 
   return JL;
-}));  
+}));
