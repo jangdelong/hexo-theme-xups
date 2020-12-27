@@ -2,6 +2,7 @@
 @import "_variables"
 @import "_extend"
 $comment_config = hexo-config("comment.enable")
+$is_site_grey_config = hexo-config("is_site_grey")
 
 // 字体样式
 //-----------------------------------------------
@@ -18,6 +19,11 @@ $comment_config = hexo-config("comment.enable")
 // Global
 //-----------------------------------------------
 @import "_base/global"
+
+// Mourning
+//-----------------------------------------------
+if $is_site_grey_config
+  @import "_base/mourning"
 
 // 头部样式
 //-----------------------------------------------

@@ -24,6 +24,8 @@
     git clone https://github.com/jangdelong/hexo-theme-xups.git
     ```
 
+    下载完之后，将 `_config.example.yml` 文件改成 `_config.yml`
+
 3. 配置 _config.yml 的 theme 配置
 
     ```

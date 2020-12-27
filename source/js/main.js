@@ -164,6 +164,7 @@ JELON = deepCopy(JELON, {
       }
     });
     this.initSearch();
+    this.initImgPreviewer();
   },
   $: function(str) {
     return /^(\[object HTML)[a-zA-Z]*(Element\])$/.test(Object.prototype.toString.call(str)) ? str : document.getElementById(str);
@@ -220,6 +221,62 @@ JELON = deepCopy(JELON, {
     if (document.getElementById('searchKeyword').value) {
       document.getElementById('searchKeywordHidden').value = 'site:jelon.info ' + document.getElementById('searchKeyword').value;
       document.getElementById('searchForm').submit();
+    }
+  },
+  initImgPreviewer: function() {
+    var _this = this;
+    var $articleWrapper = document.getElementsByClassName('article')[0];
+    if ($articleWrapper) {
+      $articleWrapper.addEventListener('click', function(e) {
+        _this.handleImgPreview(e);
+      }, false);
+    }
+  },
+  handleImgPreview: function(e) {
+    var target = e.target;
+    if (target.nodeName.toUpperCase() === 'IMG') {
+      this.createImgPreviewer(target.src);
+      this.onRemoveImgPreviewer();
+    }
+  },
+  createImgPreviewer: function(src) {
+    var $imgPreviewer = document.createElement('div');
+    var $img = document.createElement('img');
+    $imgPreviewer.id = '__IMG_PREVIEWER__';
+    $imgPreviewer.style = [
+      'position: fixed',
+      'display: flex',
+      'top: 0',
+      'right: 0',
+      'bottom: 0',
+      'left: 0',
+      'width: 100%',
+      'height: 100%',
+      'align-items: center',
+      'background-color: rgba(30, 30, 30, .9)',
+      'transition-duration: inherit',
+      'transition-property: opacity',
+      'transition-timing-function: cubic-bezier(.47,0,.74,.71)',
+      'z-index: 10000'
+    ].join(';');
+    $img.src = src;
+    $img.alt = '预览';
+    $img.style = [
+      'margin: 0 auto',
+      'max-width: 80%',
+      'max-height: 80%',
+      'transform: scale(1, 1)',
+      'z-index: 10001'
+    ].join(';');
+    $imgPreviewer.appendChild($img);
+    document.body.appendChild($imgPreviewer);
+  },
+  onRemoveImgPreviewer: function() {
+    var $imgPreviewer = document.getElementById('__IMG_PREVIEWER__');
+    if ($imgPreviewer) {
+      $imgPreviewer.onclick = function () {
+        document.body.removeChild($imgPreviewer);
+      }
     }
   }
 });

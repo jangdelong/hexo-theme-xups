@@ -33,7 +33,7 @@
     <% } else { %>
     <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>" >
     <% } %>
-    <%- css('css/style') %>
+    <%- css('css/style.css?v=' + (+new Date())) %>
     <!--[if lt IE 9]>
     <%- js('js/html5') %>
     <![endif]-->
