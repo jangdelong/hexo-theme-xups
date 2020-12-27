@@ -242,7 +242,7 @@ JELON = deepCopy(JELON, {
   createImgPreviewer: function(src) {
     var $imgPreviewer = document.createElement('div');
     var $img = document.createElement('img');
-    $imgPreviewer.id = '__IMG_PREVIEWER__';
+    $imgPreviewer.id = 'JELON__imgPreviewer';
     $imgPreviewer.style = [
       'position: fixed',
       'display: flex',
@@ -272,7 +272,7 @@ JELON = deepCopy(JELON, {
     document.body.appendChild($imgPreviewer);
   },
   onRemoveImgPreviewer: function() {
-    var $imgPreviewer = document.getElementById('__IMG_PREVIEWER__');
+    var $imgPreviewer = document.getElementById('JELON__imgPreviewer');
     if ($imgPreviewer) {
       $imgPreviewer.onclick = function () {
         document.body.removeChild($imgPreviewer);
