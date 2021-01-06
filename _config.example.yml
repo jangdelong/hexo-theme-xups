@@ -120,7 +120,9 @@ SEO:
 #----------------------------
 # 百度分析
 #----------------------------
-baidu_analytics: true
+baidu_analytics:
+  enbale: false
+  analytics_url:
 
 #----------------------------
 # 高亮样式
