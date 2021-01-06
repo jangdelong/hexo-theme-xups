@@ -331,8 +331,8 @@ if (!window['String']['prototype']['trim']) {
               pageList.push('<a href="javascript: JELON.Actions.pageJump(' + allPages + ');" class="item">末页</a>');
             } else if (page > perNavPageMaxSize && page <= allPages - perNavPageMaxSize) {
               var mod = page % perNavPageMaxSize;
-              var start = Math.floor(page / perNavPageMaxSize) * perNavPageMaxSize + 1;
-              var end = Math.ceil(page / perNavPageMaxSize) * perNavPageMaxSize;
+              var start = mod === 0 ? page : Math.floor(page / perNavPageMaxSize) * perNavPageMaxSize + 1;
+              var end = mod === 0 ? page + perNavPageMaxSize : Math.ceil(page / perNavPageMaxSize) * perNavPageMaxSize;
               pageList.push('<a href="javascript: JELON.Actions.pageJump(1);" class="item">首页</a>');
               pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上页</a>');
               for (var i = start; i <= end; i++) {
