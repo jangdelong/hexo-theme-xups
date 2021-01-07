@@ -7,7 +7,7 @@
         <%- post.author || 'Jelon' %> 发表于
         <%- partial('post/date', { date_format: 'YYYY-MM-DD' }) %>
     </p>
-    <div class="post-content">
+    <div id="JELON__articlePostContent" class="post-content">
         <%- post.content %>
     </div>
     <p class="eof">-- EOF --</p>

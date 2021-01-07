@@ -196,7 +196,7 @@ JELON = deepCopy(JELON, {
 
       function GoTop() {
         if (document.documentElement.scrollTop + document.body.scrollTop < 1) {
-          clearInterval(Timer)
+          clearInterval(Timer);
         } else {
           document.documentElement.scrollTop /= 1.1;
           document.body.scrollTop /= 1.1
@@ -208,8 +208,8 @@ JELON = deepCopy(JELON, {
     var _this = this;
     if (document.getElementById('searchKeyword') && document.getElementById('searchButton')) {
       document.getElementById('searchKeyword').onkeyup = function (e) {
-        var e = e || window.event
-        var keyCode = e.keyCode || e.which
+        var e = e || window.event;
+        var keyCode = e.keyCode || e.which;
         if (keyCode === 13) {
           _this.startSearch();
         }
@@ -225,7 +225,7 @@ JELON = deepCopy(JELON, {
   },
   initImgPreviewer: function() {
     var _this = this;
-    var $articleWrapper = document.getElementsByClassName('article')[0];
+    var $articleWrapper = document.getElementById(_this.name + '__articlePostContent');
     if ($articleWrapper) {
       $articleWrapper.addEventListener('click', function(e) {
         _this.handleImgPreview(e);
@@ -242,7 +242,7 @@ JELON = deepCopy(JELON, {
   createImgPreviewer: function(src) {
     var $imgPreviewer = document.createElement('div');
     var $img = document.createElement('img');
-    $imgPreviewer.id = 'JELON__imgPreviewer';
+    $imgPreviewer.id = this.name + '__imgPreviewer';
     $imgPreviewer.style = [
       'position: fixed',
       'display: flex',
@@ -272,7 +272,7 @@ JELON = deepCopy(JELON, {
     document.body.appendChild($imgPreviewer);
   },
   onRemoveImgPreviewer: function() {
-    var $imgPreviewer = document.getElementById('JELON__imgPreviewer');
+    var $imgPreviewer = document.getElementById(this.name + '__imgPreviewer');
     if ($imgPreviewer) {
       $imgPreviewer.onclick = function () {
         document.body.removeChild($imgPreviewer);
