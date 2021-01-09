@@ -209,7 +209,7 @@ JELON = deepCopy(JELON, {
     if (document.getElementById('searchKeyword') && document.getElementById('searchButton')) {
       document.getElementById('searchKeyword').onkeyup = function (e) {
         var e = e || window.event;
-        var keyCode = e.keyCode || e.which;
+        var keyCode = e.keyCode || e.which || e.key;
         if (keyCode === 13) {
           _this.startSearch();
         }
@@ -226,7 +226,8 @@ JELON = deepCopy(JELON, {
   initImgPreviewer: function() {
     var _this = this;
     var $articleWrapper = document.getElementById(_this.name + '__articlePostContent');
-    if ($articleWrapper) {
+    var $imgs = $articleWrapper.getElementsByTagName('img');
+    if ($articleWrapper && $imgs.length) {
       $articleWrapper.addEventListener('click', function(e) {
         _this.handleImgPreview(e);
       }, false);
