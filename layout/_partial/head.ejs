@@ -29,9 +29,9 @@
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml" >
     <% } %>
     <% if (config.favicon) { %>
-    <link rel="shortcut icon" href="<%- url_for(config.favicon) %>" >
+    <link rel="icon" href="<%- url_for(config.favicon) %>" >
     <% } else { %>
-    <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>" >
+    <link rel="icon" href="<%- url_for(theme.favicon) %>" >
     <% } %>
     <%- css('css/style.css?v=' + (+new Date())) %>
     <!--[if lt IE 9]>
