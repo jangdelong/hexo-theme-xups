@@ -226,7 +226,7 @@ JELON = deepCopy(JELON, {
   initImgPreviewer: function() {
     var _this = this;
     var $articleWrapper = document.getElementById(_this.name + '__articlePostContent');
-    var $imgs = $articleWrapper.getElementsByTagName('img');
+    var $imgs = $articleWrapper && $articleWrapper.getElementsByTagName('img');
     if ($articleWrapper && $imgs.length) {
       $articleWrapper.addEventListener('click', function(e) {
         _this.handleImgPreview(e);
