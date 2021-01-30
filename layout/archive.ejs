@@ -1,2 +1,6 @@
 <!-- 文章归档 -->
-<%- partial('_partial/post-list', { pagination: 3, index: true }) %>
+<% if (page.year || page.month) { %>
+  <%- partial('_partial/post-list', { pagination: 3, index: true }) %>
+<% } else { %>
+  <%- partial('_partial/archive-list', {}) %>
+<% } %>

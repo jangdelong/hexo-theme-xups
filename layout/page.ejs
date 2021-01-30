@@ -3,6 +3,7 @@
     <header class="text-center">
         <h4 class="post-title"><a href="javascript: void(0);"><%- page.title %></a></h4>
     </header>
+    <!-- 页面路由 -->
     <div class="post-content">
         <% if (page.pageid && page.pageid == 'about') { %>
             <%- partial('_custom/about', { page: page, post: page }) %>

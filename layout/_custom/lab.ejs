@@ -8,10 +8,7 @@
     for (var i in projects) {
 %>
     <p style="color: #444;">
-        <!--
-        <span class="icon-cogs"></span>
-        -->
-        <span class="icon-price-tags"></span>
+        <span class="iconfont icon-tags"></span>
         <%- date(projects[i].time, 'YYYY-MM-DD') %>  <%- projects[i].title %>
     </p>
 
@@ -19,7 +16,7 @@
         <% var content = projects[i].content; %>
         <% for (var j in content) { %>
         <li>
-            <a href="<%- content[j].link %>" target="_blank" class="icon-lab fr" title="查看代码" style="color: #ff5e52; border-bottom: none; font-size: 16px; margin-top: 2.5px;"></a>
+            <a href="<%- content[j].link %>" target="_blank" class="iconfont icon-code fr" title="查看代码" style="color: #ff5e52; border-bottom: none; font-size: 16px; margin-top: 2.5px;"></a>
             <span><%- content[j].name %></span>
         </li>
         <% } %>

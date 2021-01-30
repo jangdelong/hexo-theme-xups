@@ -8,11 +8,11 @@
                 </div>
             </a>
         </div>
-        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <div class="dropnav iconfont icon-nav" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             <% for (var i in theme.menu) { %>
             <li rel="<%= url_for(path) %>" class="item <%= url_for(theme.menu[i].link) == url_for(path).substring(0, url_for(path).lastIndexOf('/') + 1) ? 'current' : ''   %>">
-                <a href="<%= url_for(theme.menu[i].link) %>" title="<%= theme.menu[i].name %>" class="<%= theme.menu[i].icon %>">&nbsp;<%= theme.menu[i].name %></a>
+                <a href="<%= url_for(theme.menu[i].link) %>" title="<%= theme.menu[i].name %>" class="iconfont <%= theme.menu[i].icon %>">&nbsp;<%= theme.menu[i].name %></a>
             </li>
             <% } %>
         </ul>

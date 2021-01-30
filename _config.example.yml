@@ -12,10 +12,10 @@ menu:
     name: 首页
     link: /
     icon: icon-home
-  lab:
-    name: 实验室
-    link: /lab/
-    icon: icon-lab
+  archives:
+    name: 归档
+    link: /archives/
+    icon: icon-archives
   about:
     name: 关于
     link: /about/
