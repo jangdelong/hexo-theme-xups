@@ -19,7 +19,7 @@ menu:
   about:
     name: 关于
     link: /about/
-    icon: icon-about
+    icon: icon-staff
   comment:
     name: 留言
     link: /comment/
