@@ -19,7 +19,8 @@ if (!window['String']['prototype']['trim']) {
     ACCESS_TOKEN_KEY: 'xups-github-comments-token', // access_token key
     USER_INFO_KEY: 'xups-github-user-info',         // 登录用户信息 key
     PER_PAGE: 5,                                    // 每页的评论数
-    API_HOST: 'https://api.github.com'
+    API_HOST: 'https://api.github.com',
+    MARKDOWN_DOC: 'https://guides.github.com/features/mastering-markdown/',
   };
   var queryUrl = function (key, url, uncode) {
     url = url || location.href;
@@ -129,16 +130,6 @@ if (!window['String']['prototype']['trim']) {
     }
     return format;
   };
-  var htmlEncode = function (str) {
-    if (typeof str !== 'string') return;
-    str = str.replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        // .replace(/>/g, '&gt;')
-        .replace(/\"/g, '&quot;')
-        .replace(/\'/g, '&#39;')
-        .replace(/ /g, '&nbsp;');
-    return str;
-  };
 
   /**
    * 封装ajax函数
@@ -155,6 +146,7 @@ if (!window['String']['prototype']['trim']) {
     opt.url = opt.url || '';
     opt.async = opt.async || true;
     opt.data = opt.data || null;
+    opt.headers = opt.headers || {};
     opt.success = opt.success || function () {};
     var xhr = null;
     if (window.XMLHttpRequest) {
@@ -164,13 +156,18 @@ if (!window['String']['prototype']['trim']) {
     }
     var params = [];
     var token = window.localStorage.getItem(constants.ACCESS_TOKEN_KEY);
-
     for (var key in opt.data) {
       params.push(key + '=' + opt.data[key]);
     }
     var postData = params.join('&');
+    function setRequestHeader() {
+      for (var h in opt.headers) {
+        xhr.setRequestHeader(h, opt.headers[h]);
+      }
+    }
     if (opt.method.toUpperCase() === 'POST') {
       xhr.open(opt.method, opt.url, opt.async);
+      setRequestHeader();
       if (window.JSON) {
         postData = JSON.stringify(opt.data);
         xhr.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
@@ -189,6 +186,7 @@ if (!window['String']['prototype']['trim']) {
       xhr.send(postData);
     } else if (opt.method.toUpperCase() === 'GET') {
       xhr.open(opt.method, opt.url + '?' + postData, opt.async);
+      setRequestHeader()
       xhr.setRequestHeader('Accept', 'application/vnd.github.squirrel-girl-preview, application/vnd.github.html+json');
       // 登录校验
       if (token) {
@@ -463,15 +461,34 @@ if (!window['String']['prototype']['trim']) {
       }
     },
     tips: {
-      tpl: '<section class="tips clearfix" id="JELON__comment_tips">注：评论支持 markdown 语法！</section>',
+      tpl: [
+        '<section class="tips clearfix" id="JELON__comment_tips">',
+          '注：评论支持 ',
+          '<a href="',
+            constants.MARKDOWN_DOC,
+            '" target="_blank">',
+            'markdown',
+          '</a>',
+          ' 语法！',
+        '</section>',
+      ].join(''),
       update: function () {
         var userInfo = localStorage.getItem(constants.USER_INFO_KEY);
         var handler = '';
+        var mdTips = [
+          '注：评论支持 ',
+          '<a href="',
+            constants.MARKDOWN_DOC,
+            '" target="_blank">',
+            'markdown',
+          '</a>',
+          ' 语法！',
+        ].join('');
         // 如果文章还没关联 issue 并且登录账号是自己时
         if (userInfo && JSON.parse(userInfo).login === JL.options.owner && JL.issueNumber === 0) {
           handler = '<a href="javascript: JELON.Actions.createIssue();" class="init" title="文章关联 issue">初始化评论</a>';
         }
-        $('JELON__comment_tips').innerHTML = handler + '注：评论支持 markdown 语法！';
+        $('JELON__comment_tips').innerHTML = handler + mdTips;
       }
     },
     flashTitle: function (title) {
@@ -608,13 +625,10 @@ if (!window['String']['prototype']['trim']) {
         removeClass('JELON__editBox', 'show');
         addClass('JELON__previewBox', 'show');
         var text = $('JELON__editBox').value.trim();
-        // 安全转义
-        text = htmlEncode(text);
         if (text) {
           JL.Requests.markdown({
             text: text,
             mode: 'markdown',
-            context: 'github/gollum'
           }, function (res) {
             $('JELON__previewBox').innerHTML = res;
           });
@@ -631,8 +645,6 @@ if (!window['String']['prototype']['trim']) {
         return;
       }
       var body = $('JELON__editBox').value.trim();
-      // 安全转义
-      body = htmlEncode(body);
       if (body) {
         JL.Renders.loading.create();
         if (JL.issueNumber !== 0) {
@@ -833,6 +845,9 @@ if (!window['String']['prototype']['trim']) {
     markdown: function (data, callback) {
       ajax({
         url: constants.API_HOST + '/markdown',
+        headers: {
+          Accept: 'application/vnd.github.v3+json',
+        },
         method: 'POST',
         data: data,
         success: function (res) {
