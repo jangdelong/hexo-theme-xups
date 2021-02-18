@@ -503,6 +503,9 @@ if (!window['String']['prototype']['trim']) {
         } else if (counter % 3 === 2) {
           document.title = title + '.';
         }
+        if (counter === 0) {
+          clearInterval(timer);
+        }
       }, 100);
     },
     loading: {
