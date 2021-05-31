@@ -863,8 +863,8 @@ if (!window['String']['prototype']['trim']) {
     },
     getAccessToken: function (data, callback) {
       ajax({
-        // url: 'https://gh-oauth.imsun.net/',
-        url: 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token',
+        url: 'https://gh-oauth.imsun.net/',
+        // url: 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token',
         method: 'POST',
         headers: {
           'Accept': 'application/json'
