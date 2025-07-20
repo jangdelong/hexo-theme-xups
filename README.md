@@ -143,7 +143,7 @@
 
 ## 其他
 
-- [Jelon前端小站](http://jelon.info)
+- [Jelon前端小站](http://jelon.xyz)
 
 ## LICENCE
 
